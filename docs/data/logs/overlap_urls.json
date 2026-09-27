@@ -1,0 +1,66 @@
+{
+ "uci_phiusiil": {
+  "rows": 235795,
+  "unique_norm": 231790,
+  "exact_url_overlap": 3019,
+  "exact_url_overlap_pct": 1.28,
+  "host_overlap": 14825,
+  "host_overlap_pct": 6.29,
+  "phish_rows": 100945,
+  "phish_exact": 1305,
+  "phish_host": 6198,
+  "legit_rows": 134850,
+  "legit_exact": 1714,
+  "legit_host": 8627
+ },
+ "pirocheto_phishing_url": {
+  "rows": 11430,
+  "unique_norm": 11070,
+  "exact_url_overlap": 11430,
+  "exact_url_overlap_pct": 100.0,
+  "host_overlap": 11430,
+  "host_overlap_pct": 100.0,
+  "legit_rows": 5715,
+  "legit_exact": 5715,
+  "legit_host": 5715,
+  "phish_rows": 5715,
+  "phish_exact": 5715,
+  "phish_host": 5715
+ },
+ "shresthsamyak_screenshots": {
+  "rows": 7465,
+  "unique_norm": 7381,
+  "exact_url_overlap": 33,
+  "exact_url_overlap_pct": 0.44,
+  "host_overlap": 611,
+  "host_overlap_pct": 8.18,
+  "legit_rows": 7129,
+  "legit_exact": 32,
+  "legit_host": 593,
+  "phish_rows": 336,
+  "phish_exact": 1,
+  "phish_host": 18
+ },
+ "zenodo_8041387_phishing.csv": {
+  "rows": 5151,
+  "unique_norm": 5091,
+  "exact_url_overlap": 70,
+  "exact_url_overlap_pct": 1.36,
+  "host_overlap": 153,
+  "host_overlap_pct": 2.97,
+  "phish_rows": 5151,
+  "phish_exact": 70,
+  "phish_host": 153
+ },
+ "zenodo_8041387_not-phishing.csv": {
+  "rows": 5244,
+  "unique_norm": 5233,
+  "exact_url_overlap": 146,
+  "exact_url_overlap_pct": 2.78,
+  "host_overlap": 832,
+  "host_overlap_pct": 15.87,
+  "legit_rows": 5244,
+  "legit_exact": 146,
+  "legit_host": 832
+ }
+}

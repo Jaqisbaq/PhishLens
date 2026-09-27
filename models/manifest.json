@@ -1,0 +1,27 @@
+{
+  "branches": {
+    "url": {
+      "model_id": "CrabInHoney/urlbert-tiny-v4-phishing-classifier",
+      "revision": "fd962a5cd04e20ceed46aa8a6e31a2b40d4c8916",
+      "task": "sequence classification over the URL string",
+      "label_mapping": "0 good, 1 phishing (hard coded, model card labels are generic)",
+      "max_tokens": 64,
+      "notes": "Always pass the full URL including its scheme."
+    },
+    "text": {
+      "model_id": "ealvaradob/bert-finetuned-phishing",
+      "revision": "fa8fb73a007174c410ab7160d4e4c6e6b8d998d4",
+      "task": "sequence classification over message text",
+      "label_mapping": "0 benign, 1 phishing (from the model config)",
+      "max_tokens": 512
+    },
+    "image": {
+      "model_id": "openai/clip-vit-base-patch32",
+      "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+      "task": "image embedding, scored zero-shot against a prompt set unless models/image_head.json is present",
+      "embedding_dim": 512
+    }
+  },
+  "image_head": "models/image_head.json (fitted logistic head installed, fitted_on 694 development linked cases, grouped 5-fold CV selected C=0.03; see evaluation/outputs/fitted/image_head.json)",
+  "fusion_config": "models/fusion.json (fitted: method learned, thresholds low 0.3519 / high 0.7633, disagreement_gap 0.9967, platt calibration; unfitted default kept at models/fusion.default.json; see evaluation/outputs/fitted/fusion.json)"
+}

@@ -1,0 +1,2 @@
+mode,n_cases,model_load_ms,warm_median_total_ms,warm_median_url_ms,warm_median_text_ms,warm_median_image_ms,median_share_pct_url,median_share_pct_text,median_share_pct_image,branches_not_ok
+in_process_orchestrator,200,4335.3,1155.3,7.6,1046.1,103.6,0.7,90.4,8.9,0

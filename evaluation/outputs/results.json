@@ -1,0 +1,441 @@
+{
+  "methods": {
+    "url": {
+      "n": 299,
+      "precision_at_0.5": 0.7727272727272727,
+      "recall_at_0.5": 0.8947368421052632,
+      "f1_at_0.5": 0.8292682926829268,
+      "fpr_at_0.5": 0.272108843537415,
+      "fn_count_at_0.5": 16,
+      "confusion_at_0.5": {
+        "tp": 136,
+        "tn": 107,
+        "fp": 40,
+        "fn": 16
+      },
+      "roc_auc": 0.8920963122090941,
+      "average_precision": 0.8785309409540752,
+      "brier": 0.1518163328090889,
+      "ece_10bin": 0.13385130918369062,
+      "average_precision_ci95": [
+        0.8193171326573185,
+        0.9255913808973912
+      ],
+      "f1_at_0.5_ci95": [
+        0.7817436032419746,
+        0.8685714285714285
+      ],
+      "confusion_at_frozen_high_threshold": {
+        "tp": 127,
+        "tn": 116,
+        "fp": 31,
+        "fn": 25
+      },
+      "frozen_thresholds": {
+        "low": 0.3519,
+        "high": 0.7633
+      }
+    },
+    "text": {
+      "n": 299,
+      "precision_at_0.5": 0.5597014925373134,
+      "recall_at_0.5": 0.9868421052631579,
+      "f1_at_0.5": 0.7142857142857143,
+      "fpr_at_0.5": 0.8027210884353742,
+      "fn_count_at_0.5": 2,
+      "confusion_at_0.5": {
+        "tp": 150,
+        "tn": 29,
+        "fp": 118,
+        "fn": 2
+      },
+      "roc_auc": 0.7609872896527032,
+      "average_precision": 0.7570474715077362,
+      "brier": 0.4001047088973405,
+      "ece_10bin": 0.40066972340464163,
+      "average_precision_ci95": [
+        0.6805567399637567,
+        0.8271028463131082
+      ],
+      "f1_at_0.5_ci95": [
+        0.6633517905257036,
+        0.761293656670369
+      ],
+      "confusion_at_frozen_high_threshold": {
+        "tp": 150,
+        "tn": 29,
+        "fp": 118,
+        "fn": 2
+      },
+      "frozen_thresholds": {
+        "low": 0.3519,
+        "high": 0.7633
+      }
+    },
+    "image": {
+      "n": 299,
+      "precision_at_0.5": 0.8439716312056738,
+      "recall_at_0.5": 0.7828947368421053,
+      "f1_at_0.5": 0.8122866894197952,
+      "fpr_at_0.5": 0.14965986394557823,
+      "fn_count_at_0.5": 33,
+      "confusion_at_0.5": {
+        "tp": 119,
+        "tn": 125,
+        "fp": 22,
+        "fn": 33
+      },
+      "roc_auc": 0.899122807017544,
+      "average_precision": 0.901988253433032,
+      "brier": 0.12793451262238806,
+      "ece_10bin": 0.0672017040126789,
+      "average_precision_ci95": [
+        0.852098766812984,
+        0.9361445296159379
+      ],
+      "f1_at_0.5_ci95": [
+        0.7601312532112663,
+        0.8552199627857523
+      ],
+      "confusion_at_frozen_high_threshold": {
+        "tp": 94,
+        "tn": 136,
+        "fp": 11,
+        "fn": 58
+      },
+      "frozen_thresholds": {
+        "low": 0.3519,
+        "high": 0.7633
+      }
+    },
+    "mean": {
+      "n": 299,
+      "precision_at_0.5": 0.774869109947644,
+      "recall_at_0.5": 0.9736842105263158,
+      "f1_at_0.5": 0.8629737609329446,
+      "fpr_at_0.5": 0.2925170068027211,
+      "fn_count_at_0.5": 4,
+      "confusion_at_0.5": {
+        "tp": 148,
+        "tn": 104,
+        "fp": 43,
+        "fn": 4
+      },
+      "roc_auc": 0.9537683494450412,
+      "average_precision": 0.9514235195715794,
+      "brier": 0.12307729123263404,
+      "ece_10bin": 0.1534928985066013,
+      "average_precision_ci95": [
+        0.920377694550113,
+        0.9743479771637343
+      ],
+      "f1_at_0.5_ci95": [
+        0.8235208866155157,
+        0.8988095238095238
+      ],
+      "confusion_at_frozen_high_threshold": {
+        "tp": 113,
+        "tn": 139,
+        "fp": 8,
+        "fn": 39
+      },
+      "frozen_thresholds": {
+        "low": 0.3519,
+        "high": 0.7633
+      }
+    },
+    "max": {
+      "n": 299,
+      "precision_at_0.5": 0.5487364620938628,
+      "recall_at_0.5": 1.0,
+      "f1_at_0.5": 0.7086247086247086,
+      "fpr_at_0.5": 0.8503401360544217,
+      "fn_count_at_0.5": 0,
+      "confusion_at_0.5": {
+        "tp": 152,
+        "tn": 22,
+        "fp": 125,
+        "fn": 0
+      },
+      "roc_auc": 0.7662683494450412,
+      "average_precision": 0.7587950527295134,
+      "brier": 0.412863386187355,
+      "ece_10bin": 0.4236668225398203,
+      "average_precision_ci95": [
+        0.6824045314031678,
+        0.8279442135240082
+      ],
+      "f1_at_0.5_ci95": [
+        0.6585350871936239,
+        0.7551487414187643
+      ],
+      "confusion_at_frozen_high_threshold": {
+        "tp": 152,
+        "tn": 24,
+        "fp": 123,
+        "fn": 0
+      },
+      "frozen_thresholds": {
+        "low": 0.3519,
+        "high": 0.7633
+      }
+    },
+    "learned": {
+      "n": 299,
+      "precision_at_0.5": 0.9370629370629371,
+      "recall_at_0.5": 0.881578947368421,
+      "f1_at_0.5": 0.9084745762711864,
+      "fpr_at_0.5": 0.061224489795918366,
+      "fn_count_at_0.5": 18,
+      "confusion_at_0.5": {
+        "tp": 134,
+        "tn": 138,
+        "fp": 9,
+        "fn": 18
+      },
+      "roc_auc": 0.968000358037952,
+      "average_precision": 0.9670673439002103,
+      "brier": 0.07290344225668352,
+      "ece_10bin": 0.04616326018691671,
+      "average_precision_ci95": [
+        0.9435764678809885,
+        0.9841117675567147
+      ],
+      "f1_at_0.5_ci95": [
+        0.8710718433714949,
+        0.9390789423334481
+      ],
+      "confusion_at_frozen_high_threshold": {
+        "tp": 110,
+        "tn": 141,
+        "fp": 6,
+        "fn": 42
+      },
+      "frozen_thresholds": {
+        "low": 0.3519,
+        "high": 0.7633
+      }
+    }
+  },
+  "best_single_branch_selected_on_dev": "image",
+  "dev_average_precision_per_branch": {
+    "url": 0.8736573977473352,
+    "text": 0.7181509116993614,
+    "image": 0.9043850696677009
+  },
+  "paired_bootstrap_learned_vs_best_single": {
+    "best_single_branch": "image",
+    "average_precision_diff": {
+      "mean_diff": 0.06564106831017062,
+      "ci_low": 0.035190431460682806,
+      "ci_high": 0.10612230132564626,
+      "p_le_0": 0.0
+    },
+    "f1_diff": {
+      "mean_diff": 0.09664340788291709,
+      "ci_low": 0.05536761728466481,
+      "ci_high": 0.14106597609861787,
+      "p_le_0": 0.0
+    }
+  },
+  "three_outcome": {
+    "table": [
+      {
+        "outcome": "High concern",
+        "legitimate": 6,
+        "phishing": 110,
+        "total": 116,
+        "coverage": 0.3879598662207358
+      },
+      {
+        "outcome": "Review needed",
+        "legitimate": 42,
+        "phishing": 30,
+        "total": 72,
+        "coverage": 0.2408026755852843
+      },
+      {
+        "outcome": "Limited indicators",
+        "legitimate": 99,
+        "phishing": 12,
+        "total": 111,
+        "coverage": 0.3712374581939799
+      },
+      {
+        "outcome": "Analysis unavailable",
+        "legitimate": 0,
+        "phishing": 0,
+        "total": 0,
+        "coverage": 0.0
+      }
+    ],
+    "review_rate": 0.2408026755852843,
+    "phishing_given_limited_indicators": 12
+  },
+  "ablation": [
+    {
+      "branches_masked": "full (no masking)",
+      "n_scored": 299,
+      "average_precision": 0.9670673439002103,
+      "ap_ci_low": 0.9435764678809885,
+      "ap_ci_high": 0.9841117675567147,
+      "f1_at_0.5": 0.9084745762711864,
+      "roc_auc": 0.968000358037952,
+      "brier": 0.07290344225668352
+    },
+    {
+      "branches_masked": "mask url",
+      "n_scored": 299,
+      "average_precision": 0.9227991387655596,
+      "ap_ci_low": 0.8885994641624764,
+      "ap_ci_high": 0.952115409998024,
+      "f1_at_0.5": 0.8028169014084507,
+      "roc_auc": 0.9176065162907268,
+      "brier": 0.12057145546434703
+    },
+    {
+      "branches_masked": "mask text",
+      "n_scored": 299,
+      "average_precision": 0.9608089335239061,
+      "ap_ci_low": 0.9322963598954792,
+      "ap_ci_high": 0.9803796464888592,
+      "f1_at_0.5": 0.8904109589041096,
+      "roc_auc": 0.9620927318295739,
+      "brier": 0.08108501603245197
+    },
+    {
+      "branches_masked": "mask image",
+      "n_scored": 299,
+      "average_precision": 0.9107296856443529,
+      "ap_ci_low": 0.8678717939369204,
+      "ap_ci_high": 0.9435535592336044,
+      "f1_at_0.5": 0.8316151202749141,
+      "roc_auc": 0.9103562477622628,
+      "brier": 0.12222754756249056
+    },
+    {
+      "branches_masked": "mask url+text",
+      "n_scored": 299,
+      "average_precision": 0.901988253433032,
+      "ap_ci_low": 0.852098766812984,
+      "ap_ci_high": 0.9361445296159379,
+      "f1_at_0.5": 0.7928571428571428,
+      "roc_auc": 0.899122807017544,
+      "brier": 0.13326066315973398
+    },
+    {
+      "branches_masked": "mask url+image",
+      "n_scored": 299,
+      "average_precision": 0.7570474715077362,
+      "ap_ci_low": 0.6805567399637567,
+      "ap_ci_high": 0.8271028463131082,
+      "f1_at_0.5": 0.7111111111111111,
+      "roc_auc": 0.7609872896527032,
+      "brier": 0.21312765117033247
+    },
+    {
+      "branches_masked": "mask text+image",
+      "n_scored": 299,
+      "average_precision": 0.8785309409540752,
+      "ap_ci_low": 0.8193171326573185,
+      "ap_ci_high": 0.9255913808973912,
+      "f1_at_0.5": 0.7769784172661871,
+      "roc_auc": 0.8920963122090941,
+      "brier": 0.14124765183171145
+    }
+  ],
+  "error_inspection_worst_6": [
+    {
+      "id": "64331036cf8bf72876f1b915",
+      "label": "phishing",
+      "url_defanged": "hxxps://steamcommnunite[.]ru/profiles/61816281",
+      "p_url": 0.8198718428611755,
+      "p_text": 0.9999895095825195,
+      "p_image_head": 0.020848923045396813,
+      "fused_learned_score": 0.028470429633555228
+    },
+    {
+      "id": "6433004ecf8bf72876f1b8ac",
+      "label": "phishing",
+      "url_defanged": "hxxp://ignitioncr[.]com/Citizens/citizen-bank-RD641-detail1/",
+      "p_url": 0.27636420726776123,
+      "p_text": 0.9999223947525024,
+      "p_image_head": 0.09124217717633436,
+      "fused_learned_score": 0.03398323239003727
+    },
+    {
+      "id": "6454696fc40bc36932404ab3",
+      "label": "legitimate",
+      "url_defanged": "hxxps://signon[.]telstra[.]com/login?goto=http%3A%2F%2Femail[.]telstra[.]com%3A443%2F",
+      "p_url": 0.9965241551399231,
+      "p_text": 0.9999949932098389,
+      "p_image_head": 0.8784079399855788,
+      "fused_learned_score": 0.9512557314116412
+    },
+    {
+      "id": "644978316f96f6cb201d8d88",
+      "label": "legitimate",
+      "url_defanged": "hxxps://www2[.]etc-meisai[.]jp/etc/R?funccode=7261774389",
+      "p_url": 0.9999088048934937,
+      "p_text": 0.9987209439277649,
+      "p_image_head": 0.8135105100451023,
+      "fused_learned_score": 0.9406176004504674
+    },
+    {
+      "id": "643644c9365b001068057d97",
+      "label": "phishing",
+      "url_defanged": "hxxp://2332442111021[.]my[.]id/repeat[.]php?section_id=13-HowToContactMeta",
+      "p_url": 0.002798205940052867,
+      "p_text": 0.999985933303833,
+      "p_image_head": 0.5832058011199766,
+      "fused_learned_score": 0.08463724136462876
+    },
+    {
+      "id": "6427919c736639f0f0508b45",
+      "label": "phishing",
+      "url_defanged": "hxxps://inmotion[.]udc[.]es/sbb/SBB-CH_swiss/4e9800998ecf8427e/",
+      "p_url": 0.0797656923532486,
+      "p_text": 0.0001760138984536752,
+      "p_image_head": 0.9652911032986549,
+      "fused_learned_score": 0.10708048946197125
+    }
+  ],
+  "fusion_config_used": {
+    "method": "learned",
+    "feature_order": [
+      "logit_p_url_x_a_url",
+      "logit_p_text_x_a_text",
+      "logit_p_image_x_a_image",
+      "a_url",
+      "a_text",
+      "a_image"
+    ],
+    "coefficients": [
+      0.3237821964193841,
+      0.1722539841891832,
+      0.8567235389877049,
+      -0.8093199626592775,
+      -1.5155228173231716,
+      -0.07668284376249809
+    ],
+    "intercept": -0.09538907108166585,
+    "calibration": {
+      "type": "platt",
+      "a": 1.0062526978903061,
+      "b": -0.18000073775318892
+    },
+    "thresholds": {
+      "low": 0.3519,
+      "high": 0.7633
+    },
+    "disagreement_gap": 0.9967,
+    "fitted": true,
+    "thresholds_provisional": false,
+    "best_single_branch": null,
+    "fitted_on": "694 development linked cases (352 phishing, 342 legitimate), url+text direct model output, image branch grouped 5-fold out-of-fold logistic head, modality-masking augmentation, C=0.1 chosen by grouped 5-fold CV mean average precision (0.9623)",
+    "created": "2026-09-27T10:38:41Z",
+    "notes": "Calibration comparison on development OOF predictions: Brier uncalibrated=0.0722, platt=0.0720, temperature=0.0722. Chosen: platt. disagreement_gap set at the 90th percentile of the development max-minus-min branch probability gap (0.9967), so the disagreement gate fires on roughly the most-disagreeing 10 percent of development cases."
+  },
+  "n_test": 299,
+  "n_dev": null
+}

@@ -1,0 +1,63 @@
+{
+  "date_utc": "2026-09-27T12:55:35Z",
+  "seed": 2026,
+  "python": "3.11.3",
+  "package_versions": {
+    "torch": "2.2.2+cpu",
+    "transformers": "4.48.0",
+    "scikit_learn": "1.5.2",
+    "numpy": "1.26.4",
+    "pandas": "3.0.1"
+  },
+  "model_revisions": {
+    "text": {
+      "model_id": "ealvaradob/bert-finetuned-phishing",
+      "revision": "fa8fb73a007174c410ab7160d4e4c6e6b8d998d4"
+    },
+    "url": {
+      "model_id": "CrabInHoney/urlbert-tiny-v4-phishing-classifier",
+      "revision": "fd962a5cd04e20ceed46aa8a6e31a2b40d4c8916"
+    },
+    "image": {
+      "model_id": "openai/clip-vit-base-patch32",
+      "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268"
+    }
+  },
+  "inference_path": "adapters (src/phishlens/adapters and phishlens.fusion imported cleanly in the venv and were used directly)",
+  "split": {
+    "manifest_sha256_of_body": "7e54d92e791257ef27a2d3b38dc3a0fdb63e68a4b6348d8ece5290fdab43644c",
+    "seed": 2026,
+    "dev": {
+      "total": 694,
+      "phishing": 352,
+      "legitimate": 342
+    },
+    "test": {
+      "total": 299,
+      "phishing": 152,
+      "legitimate": 147
+    }
+  },
+  "leakage_removal_counts_part_a": [
+    {
+      "step": "screenshot_present_any (three_any)",
+      "phishing": 651,
+      "legitimate": 743
+    },
+    {
+      "step": "usable_triple (three: present, not blank)",
+      "phishing": 512,
+      "legitimate": 510
+    },
+    {
+      "step": "removed_training_leakage (url exact or normalised match vs ealvaradob urls.json)",
+      "phishing": 8,
+      "legitimate": 21
+    },
+    {
+      "step": "final_linked_case_table",
+      "phishing": 504,
+      "legitimate": 489
+    }
+  ]
+}

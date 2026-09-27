@@ -1,0 +1,157 @@
+{
+  "ealvaradob/bert-finetuned-phishing": {
+    "status": "OK",
+    "revision": "fa8fb73a007174c410ab7160d4e4c6e6b8d998d4",
+    "download_seconds": 0.7,
+    "downloaded_bytes_on_disk": 1341659759,
+    "files_present": [
+      "README.md",
+      "config.json",
+      "pytorch_model.bin",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.txt"
+    ],
+    "weights_format": "pytorch_bin_or_other"
+  },
+  "cybersectony/phishing-email-detection-distilbert_v2.4.1": {
+    "status": "OK",
+    "revision": "6724dec17360ab1f6450553f1d950404f66a5dde",
+    "download_seconds": 9.73,
+    "downloaded_bytes_on_disk": 268786752,
+    "files_present": [
+      "README.md",
+      "config.json",
+      "model.safetensors",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.txt"
+    ],
+    "weights_format": "safetensors"
+  },
+  "aamoshdahal/email-phishing-distilbert-finetuned": {
+    "status": "OK",
+    "revision": "f9d211125fcb6e85cf73630957667bc2a6e93ed3",
+    "download_seconds": 18.81,
+    "downloaded_bytes_on_disk": 268073120,
+    "files_present": [
+      "README.md",
+      "config.json",
+      "model.safetensors",
+      "special_tokens_map.json",
+      "tokenizer_config.json",
+      "vocab.txt"
+    ],
+    "weights_format": "safetensors"
+  },
+  "ElSlay/BERT-Phishing-Email-Model": {
+    "status": "OK",
+    "revision": "708d260869707ffdb0227c3c838ce957a736c9d6",
+    "download_seconds": 14.15,
+    "downloaded_bytes_on_disk": 438194204,
+    "files_present": [
+      "README.md",
+      "config.json",
+      "model.safetensors",
+      "special_tokens_map.json",
+      "tokenizer_config.json",
+      "vocab.txt"
+    ],
+    "weights_format": "safetensors"
+  },
+  "CrabInHoney/urlbert-tiny-v4-phishing-classifier": {
+    "status": "OK",
+    "revision": "fd962a5cd04e20ceed46aa8a6e31a2b40d4c8916",
+    "download_seconds": 2.91,
+    "downloaded_bytes_on_disk": 14777226,
+    "files_present": [
+      "README.md",
+      "config.json",
+      "model.safetensors",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.txt"
+    ],
+    "weights_format": "safetensors"
+  },
+  "amahdaouy/DomURLs_BERT": {
+    "status": "OK",
+    "revision": "ba5fa28ae1361f8115630e252ac49535ffe3bab1",
+    "download_seconds": 0.61,
+    "downloaded_bytes_on_disk": 443826539,
+    "files_present": [
+      "README.md",
+      "config.json",
+      "model.safetensors",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json"
+    ],
+    "weights_format": "safetensors"
+  },
+  "ealvaradob/bert-phishing-url": {
+    "status": "OK",
+    "revision": "1a87f6979f682c1cf0fea476048072f0c5b7c2d0",
+    "download_seconds": 0.61,
+    "downloaded_bytes_on_disk": 1341568497,
+    "files_present": [
+      "README.md",
+      "config.json",
+      "model.safetensors",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.txt"
+    ],
+    "weights_format": "safetensors"
+  },
+  "pirocheto/phishing-url-detection": {
+    "status": "OK",
+    "revision": "44f3b19f705b52532e0aadf3d0d15dd892b8a2fb",
+    "download_seconds": 2.58,
+    "downloaded_bytes_on_disk": 23554346,
+    "files_present": [
+      "README.md",
+      "config.json",
+      "model.onnx"
+    ],
+    "weights_format": "pytorch_bin_or_other"
+  },
+  "kmack/malicious-url-detection": {
+    "status": "OK",
+    "revision": "258499831602e1aea6c1f00e8483b820dd14b391",
+    "download_seconds": 10.22,
+    "downloaded_bytes_on_disk": 268778243,
+    "files_present": [
+      "README.md",
+      "config.json",
+      "model.safetensors",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.txt"
+    ],
+    "weights_format": "safetensors"
+  },
+  "openai/clip-vit-base-patch32": {
+    "status": "OK",
+    "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "download_seconds": 0.9,
+    "downloaded_bytes_on_disk": 608871522,
+    "files_present": [
+      "README.md",
+      "config.json",
+      "merges.txt",
+      "preprocessor_config.json",
+      "pytorch_model.bin",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.json"
+    ],
+    "weights_format": "pytorch_bin_or_other"
+  }
+}

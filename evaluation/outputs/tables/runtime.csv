@@ -1,0 +1,2 @@
+mode,n_requests,cold_first_request_ms,warm_median_ms,warm_p95_ms,warm_min_ms,warm_max_ms,failures,peak_process_memory_mb
+end_to_end,200,7721.816600002057,1165.5764999959501,2708.6964099980833,245.37439999403432,2764.3567000050098,0,2310.6

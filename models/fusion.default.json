@@ -1,0 +1,25 @@
+{
+  "method": "mean",
+  "feature_order": [
+    "logit_p_url_x_a_url",
+    "logit_p_text_x_a_text",
+    "logit_p_image_x_a_image",
+    "a_url",
+    "a_text",
+    "a_image"
+  ],
+  "coefficients": null,
+  "intercept": null,
+  "calibration": null,
+  "thresholds": {
+    "low": 0.3,
+    "high": 0.7
+  },
+  "disagreement_gap": 0.5,
+  "fitted": false,
+  "thresholds_provisional": true,
+  "best_single_branch": null,
+  "fitted_on": "",
+  "created": "2026-09-27T00:00:00Z",
+  "notes": "Default provisional configuration. Method is mean of available branches. Thresholds (0.30 / 0.70) and the disagreement gap (0.50) are placeholders, not fitted or validated on evaluation data."
+}

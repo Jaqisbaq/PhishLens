@@ -1,0 +1,3993 @@
+{
+  "generated_utc": "2026-09-27T08:55:42Z",
+  "candidates": [
+    {
+      "repo_id": "ealvaradob/bert-finetuned-phishing",
+      "branch": "text",
+      "revision": "fa8fb73a007174c410ab7160d4e4c6e6b8d998d4",
+      "licence_from_card_metadata": "apache-2.0",
+      "gated": false,
+      "card_datasets": [
+        "ealvaradob/phishing-dataset"
+      ],
+      "card_base_model": "bert-large-uncased",
+      "repo_total_bytes_all_files": 1341667333,
+      "download": {
+        "status": "OK",
+        "revision": "fa8fb73a007174c410ab7160d4e4c6e6b8d998d4",
+        "download_seconds": 0.7,
+        "downloaded_bytes_on_disk": 1341659759,
+        "files_present": [
+          "README.md",
+          "config.json",
+          "pytorch_model.bin",
+          "special_tokens_map.json",
+          "tokenizer.json",
+          "tokenizer_config.json",
+          "vocab.txt"
+        ],
+        "weights_format": "pytorch_bin_or_other"
+      },
+      "download_first_attempt": {
+        "status": "ERROR",
+        "error": "OSError(22, 'A required privilege is not held by the client')"
+      },
+      "bench": {
+        "repo_id": "ealvaradob/bert-finetuned-phishing",
+        "revision": "fa8fb73a007174c410ab7160d4e4c6e6b8d998d4",
+        "kind": "seqcls_text",
+        "env": {
+          "python": "3.11.3",
+          "torch": "2.2.2+cpu",
+          "transformers": "4.48.0",
+          "device": "cpu",
+          "logical_cpus": 16,
+          "offline_mode": "1"
+        },
+        "import_ms": {
+          "torch": 1189.2,
+          "transformers_and_model_classes": 6474.8,
+          "total": 7664.0,
+          "USE_TORCH_env": null
+        },
+        "memory_before_load": {
+          "rss_mb": 596.9,
+          "peak_working_set_mb": 596.9
+        },
+        "torch_threads": 8,
+        "load_ms": {
+          "tokenizer": 27.0,
+          "model": 183.5,
+          "total": 210.5,
+          "model_reload_same_process": 164.5
+        },
+        "tokenizer_class": "BertTokenizerFast",
+        "model_class": "BertForSequenceClassification",
+        "params": 335143938,
+        "id2label": {
+          "0": "benign",
+          "1": "phishing"
+        },
+        "problem_type": "single_label_classification",
+        "max_position_embeddings": 512,
+        "tokenizer_model_max_length": 512,
+        "max_length_used": 512,
+        "memory_after_load": {
+          "rss_mb": 612.3,
+          "peak_working_set_mb": 612.3
+        },
+        "cold_first_inference_ms": 185.7,
+        "warm_short_inputs": {
+          "runs": 30,
+          "median_ms": 143.88,
+          "mean_ms": 135.33,
+          "min_ms": 86.04,
+          "p95_ms": 162.42,
+          "max_ms": 164.59
+        },
+        "samples": [
+          {
+            "input": "Lunch at 1pm tomorrow?",
+            "expected_by_hand": "benign",
+            "tokens": 8,
+            "logits": [
+              6.2082,
+              -5.462
+            ],
+            "softmax": [
+              1.0,
+              0.0
+            ],
+            "top_id": 0,
+            "top_label": "benign"
+          },
+          {
+            "input": "Hi team, the meeting notes from Monday are attached. Let me know if I missed anything.",
+            "expected_by_hand": "benign",
+            "tokens": 21,
+            "logits": [
+              6.3773,
+              -5.7336
+            ],
+            "softmax": [
+              1.0,
+              0.0
+            ],
+            "top_id": 0,
+            "top_label": "benign"
+          },
+          {
+            "input": "Reminder: your dentist appointment is on Friday at 3pm. Reply YES to confirm.",
+            "expected_by_hand": "benign",
+            "tokens": 19,
+            "logits": [
+              5.1648,
+              -3.9226
+            ],
+            "softmax": [
+              0.9999,
+              0.0001
+            ],
+            "top_id": 0,
+            "top_label": "benign"
+          },
+          {
+            "input": "Your parcel is held, confirm your card details at the link below",
+            "expected_by_hand": "phishing",
+            "tokens": 15,
+            "logits": [
+              -4.1842,
+              4.5923
+            ],
+            "softmax": [
+              0.0002,
+              0.9998
+            ],
+            "top_id": 1,
+            "top_label": "phishing"
+          },
+          {
+            "input": "URGENT: your account has been suspended. Verify your password within 24 hours to avoid permanent closure.",
+            "expected_by_hand": "phishing",
+            "tokens": 21,
+            "logits": [
+              -5.733,
+              5.9267
+            ],
+            "softmax": [
+              0.0,
+              1.0
+            ],
+            "top_id": 1,
+            "top_label": "phishing"
+          },
+          {
+            "input": "Congratulations! You have won a $1000 gift card. Reply with your bank details to claim your prize.",
+            "expected_by_hand": "phishing",
+            "tokens": 23,
+            "logits": [
+              -5.576,
+              5.8924
+            ],
+            "softmax": [
+              0.0,
+              1.0
+            ],
+            "top_id": 1,
+            "top_label": "phishing"
+          }
+        ],
+        "unk_check": [
+          {
+            "input": "Lunch at 1pm tomorrow?",
+            "tokens": [
+              "lunch",
+              "at",
+              "1",
+              "##pm",
+              "tomorrow",
+              "?"
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "Hi team, the meeting notes from Monday are attached. Let me know if I missed anything.",
+            "tokens": [
+              "hi",
+              "team",
+              ",",
+              "the",
+              "meeting",
+              "notes",
+              "from",
+              "monday",
+              "are",
+              "attached",
+              ".",
+              "let",
+              "me",
+              "know",
+              "if",
+              "i",
+              "missed",
+              "anything",
+              "."
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "URGENT: your account has been suspended. Verify your password within 24 hours to avoid permanent closure.",
+            "tokens": [
+              "urgent",
+              ":",
+              "your",
+              "account",
+              "has",
+              "been",
+              "suspended",
+              ".",
+              "verify",
+              "your",
+              "password",
+              "within",
+              "24",
+              "hours",
+              "to",
+              "avoid",
+              "permanent",
+              "closure",
+              "."
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "Congratulations! You have won a $1000 gift card. Reply with your bank details to claim your prize.",
+            "tokens": [
+              "congratulations",
+              "!",
+              "you",
+              "have",
+              "won",
+              "a",
+              "$",
+              "1000",
+              "gift",
+              "card",
+              ".",
+              "reply",
+              "with",
+              "your",
+              "bank",
+              "details",
+              "to",
+              "claim",
+              "your",
+              "prize",
+              "."
+            ],
+            "unk_count": 0
+          }
+        ],
+        "side_check_urls": [
+          {
+            "input": "https://www.example.com/login",
+            "expected_by_hand": "benign",
+            "tokens": 14,
+            "logits": [
+              6.3355,
+              -5.5898
+            ],
+            "softmax": [
+              1.0,
+              0.0
+            ],
+            "top_id": 0,
+            "top_label": "benign"
+          },
+          {
+            "input": "https://www.example.org/docs/getting-started.html",
+            "expected_by_hand": "benign",
+            "tokens": 20,
+            "logits": [
+              6.388,
+              -5.6561
+            ],
+            "softmax": [
+              1.0,
+              0.0
+            ],
+            "top_id": 0,
+            "top_label": "benign"
+          },
+          {
+            "input": "https://accounts.example.org/signin",
+            "expected_by_hand": "benign",
+            "tokens": 14,
+            "logits": [
+              5.2684,
+              -4.2769
+            ],
+            "softmax": [
+              0.9999,
+              0.0001
+            ],
+            "top_id": 0,
+            "top_label": "benign"
+          },
+          {
+            "input": "http://secure-paypa1-account-verify.example.net/update",
+            "expected_by_hand": "phishing",
+            "tokens": 21,
+            "logits": [
+              -5.9496,
+              6.196
+            ],
+            "softmax": [
+              0.0,
+              1.0
+            ],
+            "top_id": 1,
+            "top_label": "phishing"
+          },
+          {
+            "input": "http://192.0.2.10/bank/login.php?user=verify&session=8813",
+            "expected_by_hand": "phishing",
+            "tokens": 29,
+            "logits": [
+              -5.9353,
+              6.1722
+            ],
+            "softmax": [
+              0.0,
+              1.0
+            ],
+            "top_id": 1,
+            "top_label": "phishing"
+          },
+          {
+            "input": "http://example-bank-security-alert.example.com/confirm/account/password-reset",
+            "expected_by_hand": "phishing",
+            "tokens": 25,
+            "logits": [
+              -4.932,
+              5.4341
+            ],
+            "softmax": [
+              0.0,
+              1.0
+            ],
+            "top_id": 1,
+            "top_label": "phishing"
+          }
+        ],
+        "long_input_tokens": 512,
+        "warm_long_input_512_tokens": {
+          "runs": 20,
+          "median_ms": 2374.21,
+          "mean_ms": 2377.47,
+          "min_ms": 2336.23,
+          "p95_ms": 2409.12,
+          "max_ms": 2461.76
+        },
+        "memory_end": {
+          "rss_mb": 1883.9,
+          "peak_working_set_mb": 1883.9
+        },
+        "status": "WORKS",
+        "python_warnings": []
+      }
+    },
+    {
+      "repo_id": "cybersectony/phishing-email-detection-distilbert_v2.4.1",
+      "branch": "text",
+      "revision": "6724dec17360ab1f6450553f1d950404f66a5dde",
+      "licence_from_card_metadata": "apache-2.0",
+      "gated": false,
+      "card_datasets": [
+        "cybersectony/PhishingEmailDetectionv2.0"
+      ],
+      "card_base_model": [
+        "distilbert/distilbert-base-uncased"
+      ],
+      "repo_total_bytes_all_files": 268788271,
+      "download": {
+        "status": "OK",
+        "revision": "6724dec17360ab1f6450553f1d950404f66a5dde",
+        "download_seconds": 9.73,
+        "downloaded_bytes_on_disk": 268786752,
+        "files_present": [
+          "README.md",
+          "config.json",
+          "model.safetensors",
+          "special_tokens_map.json",
+          "tokenizer.json",
+          "tokenizer_config.json",
+          "vocab.txt"
+        ],
+        "weights_format": "safetensors"
+      },
+      "download_first_attempt": {
+        "status": "OK",
+        "revision": "6724dec17360ab1f6450553f1d950404f66a5dde",
+        "download_seconds": 9.73,
+        "downloaded_bytes_on_disk": 268786752,
+        "files_present": [
+          "README.md",
+          "config.json",
+          "model.safetensors",
+          "special_tokens_map.json",
+          "tokenizer.json",
+          "tokenizer_config.json",
+          "vocab.txt"
+        ],
+        "weights_format": "safetensors"
+      },
+      "bench": {
+        "repo_id": "cybersectony/phishing-email-detection-distilbert_v2.4.1",
+        "revision": "6724dec17360ab1f6450553f1d950404f66a5dde",
+        "kind": "seqcls_text",
+        "env": {
+          "python": "3.11.3",
+          "torch": "2.2.2+cpu",
+          "transformers": "4.48.0",
+          "device": "cpu",
+          "logical_cpus": 16,
+          "offline_mode": "1"
+        },
+        "import_ms": {
+          "torch": 1211.0,
+          "transformers_and_model_classes": 6805.6,
+          "total": 8016.6,
+          "USE_TORCH_env": null
+        },
+        "memory_before_load": {
+          "rss_mb": 596.9,
+          "peak_working_set_mb": 596.9
+        },
+        "torch_threads": 8,
+        "load_ms": {
+          "tokenizer": 23.7,
+          "model": 75.3,
+          "total": 99.0,
+          "model_reload_same_process": 29.0
+        },
+        "tokenizer_class": "DistilBertTokenizerFast",
+        "model_class": "DistilBertForSequenceClassification",
+        "params": 66956548,
+        "id2label": {
+          "0": "LABEL_0",
+          "1": "LABEL_1",
+          "2": "LABEL_2",
+          "3": "LABEL_3"
+        },
+        "problem_type": "single_label_classification",
+        "max_position_embeddings": 512,
+        "tokenizer_model_max_length": 512,
+        "max_length_used": 512,
+        "memory_after_load": {
+          "rss_mb": 610.2,
+          "peak_working_set_mb": 610.2
+        },
+        "cold_first_inference_ms": 32.8,
+        "warm_short_inputs": {
+          "runs": 30,
+          "median_ms": 22.71,
+          "mean_ms": 23.53,
+          "min_ms": 12.91,
+          "p95_ms": 30.66,
+          "max_ms": 48.99
+        },
+        "samples": [
+          {
+            "input": "Lunch at 1pm tomorrow?",
+            "expected_by_hand": "benign",
+            "tokens": 8,
+            "logits": [
+              7.2112,
+              -2.9058,
+              -9.8949,
+              -7.7676
+            ],
+            "softmax": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "top_id": 0,
+            "top_label": "LABEL_0"
+          },
+          {
+            "input": "Hi team, the meeting notes from Monday are attached. Let me know if I missed anything.",
+            "expected_by_hand": "benign",
+            "tokens": 21,
+            "logits": [
+              7.3861,
+              -3.7265,
+              -9.6351,
+              -7.0082
+            ],
+            "softmax": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "top_id": 0,
+            "top_label": "LABEL_0"
+          },
+          {
+            "input": "Reminder: your dentist appointment is on Friday at 3pm. Reply YES to confirm.",
+            "expected_by_hand": "benign",
+            "tokens": 19,
+            "logits": [
+              0.4103,
+              4.5244,
+              -9.2575,
+              -9.4416
+            ],
+            "softmax": [
+              0.0161,
+              0.9839,
+              0.0,
+              0.0
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "Your parcel is held, confirm your card details at the link below",
+            "expected_by_hand": "phishing",
+            "tokens": 15,
+            "logits": [
+              -2.3278,
+              7.2955,
+              -11.7643,
+              -11.033
+            ],
+            "softmax": [
+              0.0001,
+              0.9999,
+              0.0,
+              0.0
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "URGENT: your account has been suspended. Verify your password within 24 hours to avoid permanent closure.",
+            "expected_by_hand": "phishing",
+            "tokens": 21,
+            "logits": [
+              -3.2573,
+              7.3547,
+              -11.2136,
+              -10.2853
+            ],
+            "softmax": [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "Congratulations! You have won a $1000 gift card. Reply with your bank details to claim your prize.",
+            "expected_by_hand": "phishing",
+            "tokens": 23,
+            "logits": [
+              -4.2453,
+              6.9886,
+              -9.8725,
+              -8.7922
+            ],
+            "softmax": [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          }
+        ],
+        "unk_check": [
+          {
+            "input": "Lunch at 1pm tomorrow?",
+            "tokens": [
+              "lunch",
+              "at",
+              "1",
+              "##pm",
+              "tomorrow",
+              "?"
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "Hi team, the meeting notes from Monday are attached. Let me know if I missed anything.",
+            "tokens": [
+              "hi",
+              "team",
+              ",",
+              "the",
+              "meeting",
+              "notes",
+              "from",
+              "monday",
+              "are",
+              "attached",
+              ".",
+              "let",
+              "me",
+              "know",
+              "if",
+              "i",
+              "missed",
+              "anything",
+              "."
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "URGENT: your account has been suspended. Verify your password within 24 hours to avoid permanent closure.",
+            "tokens": [
+              "urgent",
+              ":",
+              "your",
+              "account",
+              "has",
+              "been",
+              "suspended",
+              ".",
+              "verify",
+              "your",
+              "password",
+              "within",
+              "24",
+              "hours",
+              "to",
+              "avoid",
+              "permanent",
+              "closure",
+              "."
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "Congratulations! You have won a $1000 gift card. Reply with your bank details to claim your prize.",
+            "tokens": [
+              "congratulations",
+              "!",
+              "you",
+              "have",
+              "won",
+              "a",
+              "$",
+              "1000",
+              "gift",
+              "card",
+              ".",
+              "reply",
+              "with",
+              "your",
+              "bank",
+              "details",
+              "to",
+              "claim",
+              "your",
+              "prize",
+              "."
+            ],
+            "unk_count": 0
+          }
+        ],
+        "side_check_urls": [
+          {
+            "input": "https://www.example.com/login",
+            "expected_by_hand": "benign",
+            "tokens": 14,
+            "logits": [
+              -6.4012,
+              -8.6598,
+              -5.0988,
+              8.9789
+            ],
+            "softmax": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "top_id": 3,
+            "top_label": "LABEL_3"
+          },
+          {
+            "input": "https://www.example.org/docs/getting-started.html",
+            "expected_by_hand": "benign",
+            "tokens": 20,
+            "logits": [
+              -6.1066,
+              -8.2082,
+              -5.1494,
+              8.7916
+            ],
+            "softmax": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "top_id": 3,
+            "top_label": "LABEL_3"
+          },
+          {
+            "input": "https://accounts.example.org/signin",
+            "expected_by_hand": "benign",
+            "tokens": 14,
+            "logits": [
+              -6.5585,
+              -8.695,
+              -5.9163,
+              9.712
+            ],
+            "softmax": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "top_id": 3,
+            "top_label": "LABEL_3"
+          },
+          {
+            "input": "http://secure-paypa1-account-verify.example.net/update",
+            "expected_by_hand": "phishing",
+            "tokens": 21,
+            "logits": [
+              -6.1301,
+              -8.1438,
+              -6.274,
+              9.6744
+            ],
+            "softmax": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "top_id": 3,
+            "top_label": "LABEL_3"
+          },
+          {
+            "input": "http://192.0.2.10/bank/login.php?user=verify&session=8813",
+            "expected_by_hand": "phishing",
+            "tokens": 29,
+            "logits": [
+              -6.3458,
+              -8.2726,
+              -6.3542,
+              9.8303
+            ],
+            "softmax": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "top_id": 3,
+            "top_label": "LABEL_3"
+          },
+          {
+            "input": "http://example-bank-security-alert.example.com/confirm/account/password-reset",
+            "expected_by_hand": "phishing",
+            "tokens": 25,
+            "logits": [
+              -6.1331,
+              -8.0829,
+              -6.2036,
+              9.5362
+            ],
+            "softmax": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "top_id": 3,
+            "top_label": "LABEL_3"
+          }
+        ],
+        "long_input_tokens": 512,
+        "warm_long_input_512_tokens": {
+          "runs": 20,
+          "median_ms": 396.1,
+          "mean_ms": 398.82,
+          "min_ms": 367.97,
+          "p95_ms": 427.47,
+          "max_ms": 504.27
+        },
+        "memory_end": {
+          "rss_mb": 827.7,
+          "peak_working_set_mb": 827.7
+        },
+        "status": "WORKS",
+        "python_warnings": []
+      }
+    },
+    {
+      "repo_id": "aamoshdahal/email-phishing-distilbert-finetuned",
+      "branch": "text",
+      "revision": "f9d211125fcb6e85cf73630957667bc2a6e93ed3",
+      "licence_from_card_metadata": null,
+      "gated": false,
+      "card_datasets": null,
+      "card_base_model": [
+        "distilbert/distilbert-base-uncased"
+      ],
+      "repo_total_bytes_all_files": 269232588,
+      "download": {
+        "status": "OK",
+        "revision": "f9d211125fcb6e85cf73630957667bc2a6e93ed3",
+        "download_seconds": 18.81,
+        "downloaded_bytes_on_disk": 268073120,
+        "files_present": [
+          "README.md",
+          "config.json",
+          "model.safetensors",
+          "special_tokens_map.json",
+          "tokenizer_config.json",
+          "vocab.txt"
+        ],
+        "weights_format": "safetensors"
+      },
+      "download_first_attempt": {
+        "status": "OK",
+        "revision": "f9d211125fcb6e85cf73630957667bc2a6e93ed3",
+        "download_seconds": 18.81,
+        "downloaded_bytes_on_disk": 268073120,
+        "files_present": [
+          "README.md",
+          "config.json",
+          "model.safetensors",
+          "special_tokens_map.json",
+          "tokenizer_config.json",
+          "vocab.txt"
+        ],
+        "weights_format": "safetensors"
+      },
+      "bench": {
+        "repo_id": "aamoshdahal/email-phishing-distilbert-finetuned",
+        "revision": "f9d211125fcb6e85cf73630957667bc2a6e93ed3",
+        "kind": "seqcls_text",
+        "env": {
+          "python": "3.11.3",
+          "torch": "2.2.2+cpu",
+          "transformers": "4.48.0",
+          "device": "cpu",
+          "logical_cpus": 16,
+          "offline_mode": "1"
+        },
+        "import_ms": {
+          "torch": 1286.9,
+          "transformers_and_model_classes": 7398.0,
+          "total": 8684.9,
+          "USE_TORCH_env": null
+        },
+        "memory_before_load": {
+          "rss_mb": 597.2,
+          "peak_working_set_mb": 597.2
+        },
+        "torch_threads": 8,
+        "load_ms": {
+          "tokenizer": 60.2,
+          "model": 111.6,
+          "total": 171.8,
+          "model_reload_same_process": 27.4
+        },
+        "tokenizer_class": "DistilBertTokenizerFast",
+        "model_class": "DistilBertForSequenceClassification",
+        "params": 66955010,
+        "id2label": {
+          "0": "LABEL_0",
+          "1": "LABEL_1"
+        },
+        "problem_type": "single_label_classification",
+        "max_position_embeddings": 512,
+        "tokenizer_model_max_length": 512,
+        "max_length_used": 512,
+        "memory_after_load": {
+          "rss_mb": 613.1,
+          "peak_working_set_mb": 615.9
+        },
+        "cold_first_inference_ms": 46.3,
+        "warm_short_inputs": {
+          "runs": 30,
+          "median_ms": 25.9,
+          "mean_ms": 25.68,
+          "min_ms": 15.25,
+          "p95_ms": 30.96,
+          "max_ms": 34.1
+        },
+        "samples": [
+          {
+            "input": "Lunch at 1pm tomorrow?",
+            "expected_by_hand": "benign",
+            "tokens": 8,
+            "logits": [
+              3.3743,
+              -3.5566
+            ],
+            "softmax": [
+              0.999,
+              0.001
+            ],
+            "top_id": 0,
+            "top_label": "LABEL_0"
+          },
+          {
+            "input": "Hi team, the meeting notes from Monday are attached. Let me know if I missed anything.",
+            "expected_by_hand": "benign",
+            "tokens": 21,
+            "logits": [
+              3.0642,
+              -3.2651
+            ],
+            "softmax": [
+              0.9982,
+              0.0018
+            ],
+            "top_id": 0,
+            "top_label": "LABEL_0"
+          },
+          {
+            "input": "Reminder: your dentist appointment is on Friday at 3pm. Reply YES to confirm.",
+            "expected_by_hand": "benign",
+            "tokens": 19,
+            "logits": [
+              1.2342,
+              -1.0512
+            ],
+            "softmax": [
+              0.9077,
+              0.0923
+            ],
+            "top_id": 0,
+            "top_label": "LABEL_0"
+          },
+          {
+            "input": "Your parcel is held, confirm your card details at the link below",
+            "expected_by_hand": "phishing",
+            "tokens": 15,
+            "logits": [
+              -0.9974,
+              1.3364
+            ],
+            "softmax": [
+              0.0884,
+              0.9116
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "URGENT: your account has been suspended. Verify your password within 24 hours to avoid permanent closure.",
+            "expected_by_hand": "phishing",
+            "tokens": 21,
+            "logits": [
+              -3.2056,
+              4.1567
+            ],
+            "softmax": [
+              0.0006,
+              0.9994
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "Congratulations! You have won a $1000 gift card. Reply with your bank details to claim your prize.",
+            "expected_by_hand": "phishing",
+            "tokens": 23,
+            "logits": [
+              -2.9539,
+              3.7748
+            ],
+            "softmax": [
+              0.0012,
+              0.9988
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          }
+        ],
+        "unk_check": [
+          {
+            "input": "Lunch at 1pm tomorrow?",
+            "tokens": [
+              "lunch",
+              "at",
+              "1",
+              "##pm",
+              "tomorrow",
+              "?"
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "Hi team, the meeting notes from Monday are attached. Let me know if I missed anything.",
+            "tokens": [
+              "hi",
+              "team",
+              ",",
+              "the",
+              "meeting",
+              "notes",
+              "from",
+              "monday",
+              "are",
+              "attached",
+              ".",
+              "let",
+              "me",
+              "know",
+              "if",
+              "i",
+              "missed",
+              "anything",
+              "."
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "URGENT: your account has been suspended. Verify your password within 24 hours to avoid permanent closure.",
+            "tokens": [
+              "urgent",
+              ":",
+              "your",
+              "account",
+              "has",
+              "been",
+              "suspended",
+              ".",
+              "verify",
+              "your",
+              "password",
+              "within",
+              "24",
+              "hours",
+              "to",
+              "avoid",
+              "permanent",
+              "closure",
+              "."
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "Congratulations! You have won a $1000 gift card. Reply with your bank details to claim your prize.",
+            "tokens": [
+              "congratulations",
+              "!",
+              "you",
+              "have",
+              "won",
+              "a",
+              "$",
+              "1000",
+              "gift",
+              "card",
+              ".",
+              "reply",
+              "with",
+              "your",
+              "bank",
+              "details",
+              "to",
+              "claim",
+              "your",
+              "prize",
+              "."
+            ],
+            "unk_count": 0
+          }
+        ],
+        "side_check_urls": [
+          {
+            "input": "https://www.example.com/login",
+            "expected_by_hand": "benign",
+            "tokens": 14,
+            "logits": [
+              1.7895,
+              -1.8197
+            ],
+            "softmax": [
+              0.9736,
+              0.0264
+            ],
+            "top_id": 0,
+            "top_label": "LABEL_0"
+          },
+          {
+            "input": "https://www.example.org/docs/getting-started.html",
+            "expected_by_hand": "benign",
+            "tokens": 20,
+            "logits": [
+              2.3037,
+              -2.3273
+            ],
+            "softmax": [
+              0.9903,
+              0.0097
+            ],
+            "top_id": 0,
+            "top_label": "LABEL_0"
+          },
+          {
+            "input": "https://accounts.example.org/signin",
+            "expected_by_hand": "benign",
+            "tokens": 14,
+            "logits": [
+              -0.4785,
+              0.688
+            ],
+            "softmax": [
+              0.2375,
+              0.7625
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "http://secure-paypa1-account-verify.example.net/update",
+            "expected_by_hand": "phishing",
+            "tokens": 21,
+            "logits": [
+              -3.5126,
+              4.4441
+            ],
+            "softmax": [
+              0.0004,
+              0.9996
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "http://192.0.2.10/bank/login.php?user=verify&session=8813",
+            "expected_by_hand": "phishing",
+            "tokens": 29,
+            "logits": [
+              -0.5134,
+              0.6623
+            ],
+            "softmax": [
+              0.2358,
+              0.7642
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "http://example-bank-security-alert.example.com/confirm/account/password-reset",
+            "expected_by_hand": "phishing",
+            "tokens": 25,
+            "logits": [
+              0.6834,
+              -0.6224
+            ],
+            "softmax": [
+              0.7868,
+              0.2132
+            ],
+            "top_id": 0,
+            "top_label": "LABEL_0"
+          }
+        ],
+        "long_input_tokens": 512,
+        "warm_long_input_512_tokens": {
+          "runs": 20,
+          "median_ms": 372.26,
+          "mean_ms": 373.99,
+          "min_ms": 361.34,
+          "p95_ms": 387.77,
+          "max_ms": 400.01
+        },
+        "memory_end": {
+          "rss_mb": 828.6,
+          "peak_working_set_mb": 829.5
+        },
+        "status": "WORKS",
+        "python_warnings": []
+      }
+    },
+    {
+      "repo_id": "ElSlay/BERT-Phishing-Email-Model",
+      "branch": "text",
+      "revision": "708d260869707ffdb0227c3c838ce957a736c9d6",
+      "licence_from_card_metadata": null,
+      "gated": false,
+      "card_datasets": [
+        "zefang-liu/phishing-email-dataset"
+      ],
+      "card_base_model": [
+        "google-bert/bert-base-uncased"
+      ],
+      "repo_total_bytes_all_files": 438195723,
+      "download": {
+        "status": "OK",
+        "revision": "708d260869707ffdb0227c3c838ce957a736c9d6",
+        "download_seconds": 14.15,
+        "downloaded_bytes_on_disk": 438194204,
+        "files_present": [
+          "README.md",
+          "config.json",
+          "model.safetensors",
+          "special_tokens_map.json",
+          "tokenizer_config.json",
+          "vocab.txt"
+        ],
+        "weights_format": "safetensors"
+      },
+      "download_first_attempt": {
+        "status": "OK",
+        "revision": "708d260869707ffdb0227c3c838ce957a736c9d6",
+        "download_seconds": 14.15,
+        "downloaded_bytes_on_disk": 438194204,
+        "files_present": [
+          "README.md",
+          "config.json",
+          "model.safetensors",
+          "special_tokens_map.json",
+          "tokenizer_config.json",
+          "vocab.txt"
+        ],
+        "weights_format": "safetensors"
+      },
+      "bench": {
+        "repo_id": "ElSlay/BERT-Phishing-Email-Model",
+        "revision": "708d260869707ffdb0227c3c838ce957a736c9d6",
+        "kind": "seqcls_text",
+        "env": {
+          "python": "3.11.3",
+          "torch": "2.2.2+cpu",
+          "transformers": "4.48.0",
+          "device": "cpu",
+          "logical_cpus": 16,
+          "offline_mode": "1"
+        },
+        "import_ms": {
+          "torch": 1197.3,
+          "transformers_and_model_classes": 6668.3,
+          "total": 7865.6,
+          "USE_TORCH_env": null
+        },
+        "memory_before_load": {
+          "rss_mb": 596.8,
+          "peak_working_set_mb": 596.8
+        },
+        "torch_threads": 8,
+        "load_ms": {
+          "tokenizer": 44.7,
+          "model": 123.0,
+          "total": 167.6,
+          "model_reload_same_process": 53.2
+        },
+        "tokenizer_class": "BertTokenizerFast",
+        "model_class": "BertForSequenceClassification",
+        "params": 109483778,
+        "id2label": {
+          "0": "LABEL_0",
+          "1": "LABEL_1"
+        },
+        "problem_type": "single_label_classification",
+        "max_position_embeddings": 512,
+        "tokenizer_model_max_length": 512,
+        "max_length_used": 512,
+        "memory_after_load": {
+          "rss_mb": 612.3,
+          "peak_working_set_mb": 615.1
+        },
+        "cold_first_inference_ms": 68.7,
+        "warm_short_inputs": {
+          "runs": 30,
+          "median_ms": 50.15,
+          "mean_ms": 48.48,
+          "min_ms": 28.58,
+          "p95_ms": 59.58,
+          "max_ms": 68.99
+        },
+        "samples": [
+          {
+            "input": "Lunch at 1pm tomorrow?",
+            "expected_by_hand": "benign",
+            "tokens": 8,
+            "logits": [
+              3.2298,
+              -3.1197
+            ],
+            "softmax": [
+              0.9983,
+              0.0017
+            ],
+            "top_id": 0,
+            "top_label": "LABEL_0"
+          },
+          {
+            "input": "Hi team, the meeting notes from Monday are attached. Let me know if I missed anything.",
+            "expected_by_hand": "benign",
+            "tokens": 21,
+            "logits": [
+              4.1665,
+              -3.9941
+            ],
+            "softmax": [
+              0.9997,
+              0.0003
+            ],
+            "top_id": 0,
+            "top_label": "LABEL_0"
+          },
+          {
+            "input": "Reminder: your dentist appointment is on Friday at 3pm. Reply YES to confirm.",
+            "expected_by_hand": "benign",
+            "tokens": 19,
+            "logits": [
+              1.7584,
+              -1.0687
+            ],
+            "softmax": [
+              0.9441,
+              0.0559
+            ],
+            "top_id": 0,
+            "top_label": "LABEL_0"
+          },
+          {
+            "input": "Your parcel is held, confirm your card details at the link below",
+            "expected_by_hand": "phishing",
+            "tokens": 15,
+            "logits": [
+              -1.933,
+              2.1208
+            ],
+            "softmax": [
+              0.0171,
+              0.9829
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "URGENT: your account has been suspended. Verify your password within 24 hours to avoid permanent closure.",
+            "expected_by_hand": "phishing",
+            "tokens": 21,
+            "logits": [
+              -2.7487,
+              2.8252
+            ],
+            "softmax": [
+              0.0038,
+              0.9962
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "Congratulations! You have won a $1000 gift card. Reply with your bank details to claim your prize.",
+            "expected_by_hand": "phishing",
+            "tokens": 23,
+            "logits": [
+              -2.867,
+              3.231
+            ],
+            "softmax": [
+              0.0022,
+              0.9978
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          }
+        ],
+        "unk_check": [
+          {
+            "input": "Lunch at 1pm tomorrow?",
+            "tokens": [
+              "lunch",
+              "at",
+              "1",
+              "##pm",
+              "tomorrow",
+              "?"
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "Hi team, the meeting notes from Monday are attached. Let me know if I missed anything.",
+            "tokens": [
+              "hi",
+              "team",
+              ",",
+              "the",
+              "meeting",
+              "notes",
+              "from",
+              "monday",
+              "are",
+              "attached",
+              ".",
+              "let",
+              "me",
+              "know",
+              "if",
+              "i",
+              "missed",
+              "anything",
+              "."
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "URGENT: your account has been suspended. Verify your password within 24 hours to avoid permanent closure.",
+            "tokens": [
+              "urgent",
+              ":",
+              "your",
+              "account",
+              "has",
+              "been",
+              "suspended",
+              ".",
+              "verify",
+              "your",
+              "password",
+              "within",
+              "24",
+              "hours",
+              "to",
+              "avoid",
+              "permanent",
+              "closure",
+              "."
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "Congratulations! You have won a $1000 gift card. Reply with your bank details to claim your prize.",
+            "tokens": [
+              "congratulations",
+              "!",
+              "you",
+              "have",
+              "won",
+              "a",
+              "$",
+              "1000",
+              "gift",
+              "card",
+              ".",
+              "reply",
+              "with",
+              "your",
+              "bank",
+              "details",
+              "to",
+              "claim",
+              "your",
+              "prize",
+              "."
+            ],
+            "unk_count": 0
+          }
+        ],
+        "side_check_urls": [
+          {
+            "input": "https://www.example.com/login",
+            "expected_by_hand": "benign",
+            "tokens": 14,
+            "logits": [
+              -0.1523,
+              0.1468
+            ],
+            "softmax": [
+              0.4258,
+              0.5742
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "https://www.example.org/docs/getting-started.html",
+            "expected_by_hand": "benign",
+            "tokens": 20,
+            "logits": [
+              1.9601,
+              -1.5794
+            ],
+            "softmax": [
+              0.9718,
+              0.0282
+            ],
+            "top_id": 0,
+            "top_label": "LABEL_0"
+          },
+          {
+            "input": "https://accounts.example.org/signin",
+            "expected_by_hand": "benign",
+            "tokens": 14,
+            "logits": [
+              -0.6102,
+              0.7509
+            ],
+            "softmax": [
+              0.2041,
+              0.7959
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "http://secure-paypa1-account-verify.example.net/update",
+            "expected_by_hand": "phishing",
+            "tokens": 21,
+            "logits": [
+              -3.5163,
+              3.6516
+            ],
+            "softmax": [
+              0.0008,
+              0.9992
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "http://192.0.2.10/bank/login.php?user=verify&session=8813",
+            "expected_by_hand": "phishing",
+            "tokens": 29,
+            "logits": [
+              -3.0821,
+              3.283
+            ],
+            "softmax": [
+              0.0017,
+              0.9983
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "http://example-bank-security-alert.example.com/confirm/account/password-reset",
+            "expected_by_hand": "phishing",
+            "tokens": 25,
+            "logits": [
+              -2.329,
+              2.3978
+            ],
+            "softmax": [
+              0.0088,
+              0.9912
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          }
+        ],
+        "long_input_tokens": 512,
+        "warm_long_input_512_tokens": {
+          "runs": 20,
+          "median_ms": 772.87,
+          "mean_ms": 773.42,
+          "min_ms": 745.48,
+          "p95_ms": 789.95,
+          "max_ms": 827.82
+        },
+        "memory_end": {
+          "rss_mb": 999.3,
+          "peak_working_set_mb": 999.3
+        },
+        "status": "WORKS",
+        "python_warnings": []
+      }
+    },
+    {
+      "repo_id": "CrabInHoney/urlbert-tiny-v4-phishing-classifier",
+      "branch": "url",
+      "revision": "fd962a5cd04e20ceed46aa8a6e31a2b40d4c8916",
+      "licence_from_card_metadata": "apache-2.0",
+      "gated": false,
+      "card_datasets": [
+        "ealvaradob/phishing-dataset"
+      ],
+      "card_base_model": [
+        "CrabInHoney/urlbert-tiny-base-v4"
+      ],
+      "repo_total_bytes_all_files": 14778745,
+      "download": {
+        "status": "OK",
+        "revision": "fd962a5cd04e20ceed46aa8a6e31a2b40d4c8916",
+        "download_seconds": 2.91,
+        "downloaded_bytes_on_disk": 14777226,
+        "files_present": [
+          "README.md",
+          "config.json",
+          "model.safetensors",
+          "special_tokens_map.json",
+          "tokenizer.json",
+          "tokenizer_config.json",
+          "vocab.txt"
+        ],
+        "weights_format": "safetensors"
+      },
+      "download_first_attempt": {
+        "status": "OK",
+        "revision": "fd962a5cd04e20ceed46aa8a6e31a2b40d4c8916",
+        "download_seconds": 2.91,
+        "downloaded_bytes_on_disk": 14777226,
+        "files_present": [
+          "README.md",
+          "config.json",
+          "model.safetensors",
+          "special_tokens_map.json",
+          "tokenizer.json",
+          "tokenizer_config.json",
+          "vocab.txt"
+        ],
+        "weights_format": "safetensors"
+      },
+      "bench": {
+        "repo_id": "CrabInHoney/urlbert-tiny-v4-phishing-classifier",
+        "revision": "fd962a5cd04e20ceed46aa8a6e31a2b40d4c8916",
+        "kind": "seqcls_url",
+        "env": {
+          "python": "3.11.3",
+          "torch": "2.2.2+cpu",
+          "transformers": "4.48.0",
+          "device": "cpu",
+          "logical_cpus": 16,
+          "offline_mode": "1"
+        },
+        "import_ms": {
+          "torch": 1334.6,
+          "transformers_and_model_classes": 6695.2,
+          "total": 8029.7,
+          "USE_TORCH_env": null
+        },
+        "memory_before_load": {
+          "rss_mb": 597.8,
+          "peak_working_set_mb": 597.8
+        },
+        "torch_threads": 8,
+        "load_ms": {
+          "tokenizer": 6.3,
+          "model": 93.8,
+          "total": 100.1,
+          "model_reload_same_process": 35.9
+        },
+        "tokenizer_class": "BertTokenizerFast",
+        "model_class": "BertForSequenceClassification",
+        "params": 3686210,
+        "id2label": {
+          "0": "LABEL_0",
+          "1": "LABEL_1"
+        },
+        "problem_type": "single_label_classification",
+        "max_position_embeddings": 64,
+        "tokenizer_model_max_length": 64,
+        "max_length_used": 64,
+        "memory_after_load": {
+          "rss_mb": 604.3,
+          "peak_working_set_mb": 604.3
+        },
+        "cold_first_inference_ms": 13.2,
+        "warm_short_inputs": {
+          "runs": 30,
+          "median_ms": 7.71,
+          "mean_ms": 7.92,
+          "min_ms": 6.17,
+          "p95_ms": 9.21,
+          "max_ms": 13.78
+        },
+        "samples": [
+          {
+            "input": "https://www.example.com/login",
+            "expected_by_hand": "benign",
+            "tokens": 19,
+            "logits": [
+              2.6014,
+              -2.8852
+            ],
+            "softmax": [
+              0.9959,
+              0.0041
+            ],
+            "top_id": 0,
+            "top_label": "LABEL_0"
+          },
+          {
+            "input": "https://www.example.org/docs/getting-started.html",
+            "expected_by_hand": "benign",
+            "tokens": 35,
+            "logits": [
+              3.2984,
+              -3.7029
+            ],
+            "softmax": [
+              0.9991,
+              0.0009
+            ],
+            "top_id": 0,
+            "top_label": "LABEL_0"
+          },
+          {
+            "input": "https://accounts.example.org/signin",
+            "expected_by_hand": "benign",
+            "tokens": 27,
+            "logits": [
+              1.8332,
+              -2.0328
+            ],
+            "softmax": [
+              0.9795,
+              0.0205
+            ],
+            "top_id": 0,
+            "top_label": "LABEL_0"
+          },
+          {
+            "input": "http://secure-paypa1-account-verify.example.net/update",
+            "expected_by_hand": "phishing",
+            "tokens": 37,
+            "logits": [
+              -4.4425,
+              5.0323
+            ],
+            "softmax": [
+              0.0001,
+              0.9999
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "http://192.0.2.10/bank/login.php?user=verify&session=8813",
+            "expected_by_hand": "phishing",
+            "tokens": 40,
+            "logits": [
+              -2.8489,
+              3.3018
+            ],
+            "softmax": [
+              0.0021,
+              0.9979
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "http://example-bank-security-alert.example.com/confirm/account/password-reset",
+            "expected_by_hand": "phishing",
+            "tokens": 54,
+            "logits": [
+              -0.5097,
+              0.6865
+            ],
+            "softmax": [
+              0.2322,
+              0.7678
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          }
+        ],
+        "unk_check": [
+          {
+            "input": "https://www.example.com/login",
+            "tokens": [
+              "https",
+              ":",
+              "/",
+              "/",
+              "www",
+              ".",
+              "e",
+              "##x",
+              "##a",
+              "##m",
+              "##p",
+              "##l",
+              "##e",
+              ".",
+              "com",
+              "/",
+              "login"
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "https://www.example.org/docs/getting-started.html",
+            "tokens": [
+              "https",
+              ":",
+              "/",
+              "/",
+              "www",
+              ".",
+              "e",
+              "##x",
+              "##a",
+              "##m",
+              "##p",
+              "##l",
+              "##e",
+              ".",
+              "org",
+              "/",
+              "docs",
+              "/",
+              "g",
+              "##e",
+              "##t",
+              "##ti",
+              "##n",
+              "##g",
+              "-",
+              "s",
+              "##ta",
+              "##r",
+              "##t",
+              "##ed",
+              ".",
+              "htm",
+              "##l"
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "http://192.0.2.10/bank/login.php?user=verify&session=8813",
+            "tokens": [
+              "http",
+              ":",
+              "/",
+              "/",
+              "1",
+              "##9",
+              "##2",
+              ".",
+              "0",
+              ".",
+              "2",
+              ".",
+              "1",
+              "##0",
+              "/",
+              "bank",
+              "/",
+              "login",
+              ".",
+              "php",
+              "?",
+              "u",
+              "##s",
+              "##er",
+              "[UNK]",
+              "verif",
+              "##y",
+              "&",
+              "se",
+              "##s",
+              "##si",
+              "##o",
+              "##n",
+              "[UNK]",
+              "8",
+              "##8",
+              "##1",
+              "##3"
+            ],
+            "unk_count": 2
+          },
+          {
+            "input": "http://example-bank-security-alert.example.com/confirm/account/password-reset",
+            "tokens": [
+              "http",
+              ":",
+              "/",
+              "/",
+              "e",
+              "##x",
+              "##a",
+              "##m",
+              "##p",
+              "##l",
+              "##e",
+              "-",
+              "bank",
+              "-",
+              "security",
+              "-",
+              "al",
+              "##er",
+              "##t",
+              ".",
+              "e",
+              "##x",
+              "##a",
+              "##m",
+              "##p",
+              "##l",
+              "##e",
+              ".",
+              "com",
+              "/",
+              "con",
+              "##fi",
+              "##r",
+              "##m",
+              "/",
+              "a",
+              "##c",
+              "##co",
+              "##un",
+              "##t"
+            ],
+            "unk_count": 0
+          }
+        ],
+        "samples_scheme_stripped": [
+          {
+            "input": "www.example.com/login",
+            "expected_by_hand": "benign",
+            "tokens": 15,
+            "logits": [
+              0.4151,
+              -0.3386
+            ],
+            "softmax": [
+              0.68,
+              0.32
+            ],
+            "top_id": 0,
+            "top_label": "LABEL_0"
+          },
+          {
+            "input": "www.example.org/docs/getting-started.html",
+            "expected_by_hand": "benign",
+            "tokens": 31,
+            "logits": [
+              2.9047,
+              -3.2386
+            ],
+            "softmax": [
+              0.9979,
+              0.0021
+            ],
+            "top_id": 0,
+            "top_label": "LABEL_0"
+          },
+          {
+            "input": "accounts.example.org/signin",
+            "expected_by_hand": "benign",
+            "tokens": 23,
+            "logits": [
+              -1.8204,
+              2.1555
+            ],
+            "softmax": [
+              0.0184,
+              0.9816
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "secure-paypa1-account-verify.example.net/update",
+            "expected_by_hand": "phishing",
+            "tokens": 33,
+            "logits": [
+              -4.4621,
+              5.0566
+            ],
+            "softmax": [
+              0.0001,
+              0.9999
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "192.0.2.10/bank/login.php?user=verify&session=8813",
+            "expected_by_hand": "phishing",
+            "tokens": 36,
+            "logits": [
+              -3.8575,
+              4.383
+            ],
+            "softmax": [
+              0.0003,
+              0.9997
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          },
+          {
+            "input": "example-bank-security-alert.example.com/confirm/account/password-reset",
+            "expected_by_hand": "phishing",
+            "tokens": 50,
+            "logits": [
+              -0.9667,
+              1.1892
+            ],
+            "softmax": [
+              0.1038,
+              0.8962
+            ],
+            "top_id": 1,
+            "top_label": "LABEL_1"
+          }
+        ],
+        "memory_end": {
+          "rss_mb": 627.6,
+          "peak_working_set_mb": 628.0
+        },
+        "status": "WORKS",
+        "python_warnings": []
+      }
+    },
+    {
+      "repo_id": "amahdaouy/DomURLs_BERT",
+      "branch": "url",
+      "revision": "ba5fa28ae1361f8115630e252ac49535ffe3bab1",
+      "licence_from_card_metadata": null,
+      "gated": false,
+      "card_datasets": null,
+      "card_base_model": null,
+      "repo_total_bytes_all_files": 443828058,
+      "download": {
+        "status": "OK",
+        "revision": "ba5fa28ae1361f8115630e252ac49535ffe3bab1",
+        "download_seconds": 0.61,
+        "downloaded_bytes_on_disk": 443826539,
+        "files_present": [
+          "README.md",
+          "config.json",
+          "model.safetensors",
+          "special_tokens_map.json",
+          "tokenizer.json",
+          "tokenizer_config.json"
+        ],
+        "weights_format": "safetensors"
+      },
+      "download_first_attempt": {
+        "status": "ERROR",
+        "error": "OSError(22, 'A required privilege is not held by the client')"
+      },
+      "bench": {
+        "repo_id": "amahdaouy/DomURLs_BERT",
+        "revision": "ba5fa28ae1361f8115630e252ac49535ffe3bab1",
+        "kind": "encoder_url",
+        "env": {
+          "python": "3.11.3",
+          "torch": "2.2.2+cpu",
+          "transformers": "4.48.0",
+          "device": "cpu",
+          "logical_cpus": 16,
+          "offline_mode": "1"
+        },
+        "import_ms": {
+          "torch": 1203.7,
+          "transformers_and_model_classes": 6049.2,
+          "total": 7252.8,
+          "USE_TORCH_env": null
+        },
+        "memory_before_load": {
+          "rss_mb": 597.9,
+          "peak_working_set_mb": 597.9
+        },
+        "torch_threads": 8,
+        "config_architectures": [
+          "BertModel"
+        ],
+        "config_id2label": {
+          "0": "LABEL_0",
+          "1": "LABEL_1"
+        },
+        "load_ms": {
+          "tokenizer": 43.4,
+          "model": 343.7,
+          "total": 387.1,
+          "model_reload_same_process": 42.5
+        },
+        "tokenizer_class": "PreTrainedTokenizerFast",
+        "model_class": "BertModel",
+        "params": 110617344,
+        "hidden_size": 768,
+        "memory_after_load": {
+          "rss_mb": 636.8,
+          "peak_working_set_mb": 636.8
+        },
+        "head_check": {
+          "missing_keys_when_loaded_as_classifier": [
+            "classifier.bias",
+            "classifier.weight"
+          ],
+          "unexpected_keys": [],
+          "has_trained_classification_head": false,
+          "checkpoint_top_level_prefixes": [
+            "embeddings",
+            "encoder",
+            "pooler"
+          ],
+          "checkpoint_non_encoder_keys": [
+            "pooler.dense.bias",
+            "pooler.dense.weight"
+          ]
+        },
+        "cold_first_inference_ms": 62.7,
+        "warm_short_inputs": {
+          "runs": 30,
+          "median_ms": 35.98,
+          "mean_ms": 36.4,
+          "min_ms": 28.84,
+          "p95_ms": 43.62,
+          "max_ms": 44.57
+        },
+        "samples": [
+          {
+            "input": "https://www.example.com/login",
+            "expected_by_hand": "benign",
+            "tokens": 9,
+            "tokenized": [
+              "https",
+              ":/",
+              "/",
+              "www.ex",
+              "amp",
+              "le.com",
+              "/login"
+            ],
+            "cls_norm": 20.1139,
+            "mean_pool_norm": 11.3608,
+            "mean_pool_first5": [
+              -0.2499,
+              -0.2963,
+              0.1577,
+              0.1375,
+              0.0884
+            ]
+          },
+          {
+            "input": "https://www.example.org/docs/getting-started.html",
+            "expected_by_hand": "benign",
+            "tokens": 13,
+            "tokenized": [
+              "https",
+              ":/",
+              "/",
+              "www.ex",
+              "amp",
+              "le.org",
+              "/doc",
+              "s/g",
+              "etting-",
+              "start",
+              "ed.html"
+            ],
+            "cls_norm": 20.1473,
+            "mean_pool_norm": 11.031,
+            "mean_pool_first5": [
+              -0.0929,
+              -0.3296,
+              0.056,
+              0.2541,
+              0.1402
+            ]
+          },
+          {
+            "input": "https://accounts.example.org/signin",
+            "expected_by_hand": "benign",
+            "tokens": 11,
+            "tokenized": [
+              "https",
+              ":/",
+              "/account",
+              "s.",
+              "ex",
+              "amp",
+              "le.org",
+              "/sign",
+              "in"
+            ],
+            "cls_norm": 19.9962,
+            "mean_pool_norm": 11.2759,
+            "mean_pool_first5": [
+              -0.3086,
+              -0.2524,
+              0.1274,
+              0.1079,
+              -0.0283
+            ]
+          },
+          {
+            "input": "http://secure-paypa1-account-verify.example.net/update",
+            "expected_by_hand": "phishing",
+            "tokens": 18,
+            "tokenized": [
+              "http:/",
+              "/s",
+              "ecur",
+              "e-p",
+              "ay",
+              "pa",
+              "1-",
+              "account",
+              "-ver",
+              "if",
+              "y.",
+              "ex",
+              "amp",
+              "le.net",
+              "/",
+              "update"
+            ],
+            "cls_norm": 20.0036,
+            "mean_pool_norm": 11.414,
+            "mean_pool_first5": [
+              -0.1455,
+              -0.3945,
+              0.0142,
+              0.0738,
+              -0.1197
+            ]
+          },
+          {
+            "input": "http://192.0.2.10/bank/login.php?user=verify&session=8813",
+            "expected_by_hand": "phishing",
+            "tokens": 19,
+            "tokenized": [
+              "http:/",
+              "/19",
+              "2.",
+              "0",
+              ".",
+              "2.",
+              "10",
+              "/bank",
+              "/login",
+              ".php?",
+              "user=",
+              "ver",
+              "ify",
+              "&s",
+              "ession=",
+              "88",
+              "13"
+            ],
+            "cls_norm": 19.8265,
+            "mean_pool_norm": 11.4215,
+            "mean_pool_first5": [
+              -0.1094,
+              -0.2595,
+              -0.1079,
+              0.074,
+              -0.1494
+            ]
+          },
+          {
+            "input": "http://example-bank-security-alert.example.com/confirm/account/password-reset",
+            "expected_by_hand": "phishing",
+            "tokens": 19,
+            "tokenized": [
+              "http:/",
+              "/ex",
+              "ampl",
+              "e-bank",
+              "-security-",
+              "alert",
+              ".",
+              "ex",
+              "amp",
+              "le.com",
+              "/c",
+              "onfirm",
+              "/account",
+              "/pass",
+              "word",
+              "-res",
+              "et"
+            ],
+            "cls_norm": 19.9803,
+            "mean_pool_norm": 11.3009,
+            "mean_pool_first5": [
+              -0.1033,
+              -0.2721,
+              0.1022,
+              0.0471,
+              0.0144
+            ]
+          }
+        ],
+        "embedding_shape": [
+          6,
+          768
+        ],
+        "cosine_similarity_matrix_mean_pool": [
+          [
+            1.0,
+            0.9376,
+            0.9508,
+            0.8712,
+            0.8557,
+            0.9033
+          ],
+          [
+            0.9376,
+            1.0,
+            0.9437,
+            0.8947,
+            0.8817,
+            0.9219
+          ],
+          [
+            0.9508,
+            0.9437,
+            1.0,
+            0.9279,
+            0.8959,
+            0.946
+          ],
+          [
+            0.8712,
+            0.8947,
+            0.9279,
+            1.0,
+            0.9103,
+            0.9561
+          ],
+          [
+            0.8557,
+            0.8817,
+            0.8959,
+            0.9103,
+            1.0,
+            0.8998
+          ],
+          [
+            0.9033,
+            0.9219,
+            0.946,
+            0.9561,
+            0.8998,
+            1.0
+          ]
+        ],
+        "logistic_head_mechanical_check": {
+          "note": "Fitted on the same 6 toy vectors it is scored on. Proves the plumbing only. Not an accuracy figure.",
+          "fit_ms": 5.0,
+          "coef_shape": [
+            1,
+            768
+          ]
+        },
+        "memory_end": {
+          "rss_mb": 999.2,
+          "peak_working_set_mb": 999.2
+        },
+        "status": "NEEDS HEAD",
+        "python_warnings": []
+      }
+    },
+    {
+      "repo_id": "ealvaradob/bert-phishing-url",
+      "branch": "url",
+      "revision": "1a87f6979f682c1cf0fea476048072f0c5b7c2d0",
+      "licence_from_card_metadata": "apache-2.0",
+      "gated": false,
+      "card_datasets": [
+        "ealvaradob/phishing-dataset"
+      ],
+      "card_base_model": null,
+      "repo_total_bytes_all_files": 1341574744,
+      "download": {
+        "status": "OK",
+        "revision": "1a87f6979f682c1cf0fea476048072f0c5b7c2d0",
+        "download_seconds": 0.61,
+        "downloaded_bytes_on_disk": 1341568497,
+        "files_present": [
+          "README.md",
+          "config.json",
+          "model.safetensors",
+          "special_tokens_map.json",
+          "tokenizer.json",
+          "tokenizer_config.json",
+          "vocab.txt"
+        ],
+        "weights_format": "safetensors"
+      },
+      "download_first_attempt": {
+        "status": "ERROR",
+        "error": "OSError(22, 'A required privilege is not held by the client')"
+      },
+      "bench": {
+        "repo_id": "ealvaradob/bert-phishing-url",
+        "revision": "1a87f6979f682c1cf0fea476048072f0c5b7c2d0",
+        "kind": "seqcls_url",
+        "env": {
+          "python": "3.11.3",
+          "torch": "2.2.2+cpu",
+          "transformers": "4.48.0",
+          "device": "cpu",
+          "logical_cpus": 16,
+          "offline_mode": "1"
+        },
+        "import_ms": {
+          "torch": 1192.1,
+          "transformers_and_model_classes": 5697.9,
+          "total": 6890.1,
+          "USE_TORCH_env": null
+        },
+        "memory_before_load": {
+          "rss_mb": 596.7,
+          "peak_working_set_mb": 596.7
+        },
+        "torch_threads": 8,
+        "load_ms": {
+          "tokenizer": 23.9,
+          "model": 153.6,
+          "total": 177.5,
+          "model_reload_same_process": 113.1
+        },
+        "tokenizer_class": "BertTokenizerFast",
+        "model_class": "BertForSequenceClassification",
+        "params": 335143938,
+        "id2label": {
+          "0": "benign",
+          "1": "phishing"
+        },
+        "problem_type": "single_label_classification",
+        "max_position_embeddings": 512,
+        "tokenizer_model_max_length": 512,
+        "max_length_used": 512,
+        "memory_after_load": {
+          "rss_mb": 614.4,
+          "peak_working_set_mb": 614.4
+        },
+        "cold_first_inference_ms": 206.6,
+        "warm_short_inputs": {
+          "runs": 30,
+          "median_ms": 139.66,
+          "mean_ms": 146.58,
+          "min_ms": 115.18,
+          "p95_ms": 183.89,
+          "max_ms": 189.96
+        },
+        "samples": [
+          {
+            "input": "https://www.example.com/login",
+            "expected_by_hand": "benign",
+            "tokens": 14,
+            "logits": [
+              4.5514,
+              -2.9037
+            ],
+            "softmax": [
+              0.9994,
+              0.0006
+            ],
+            "top_id": 0,
+            "top_label": "benign"
+          },
+          {
+            "input": "https://www.example.org/docs/getting-started.html",
+            "expected_by_hand": "benign",
+            "tokens": 20,
+            "logits": [
+              4.8893,
+              -3.5772
+            ],
+            "softmax": [
+              0.9998,
+              0.0002
+            ],
+            "top_id": 0,
+            "top_label": "benign"
+          },
+          {
+            "input": "https://accounts.example.org/signin",
+            "expected_by_hand": "benign",
+            "tokens": 14,
+            "logits": [
+              2.9248,
+              -1.8855
+            ],
+            "softmax": [
+              0.9919,
+              0.0081
+            ],
+            "top_id": 0,
+            "top_label": "benign"
+          },
+          {
+            "input": "http://secure-paypa1-account-verify.example.net/update",
+            "expected_by_hand": "phishing",
+            "tokens": 21,
+            "logits": [
+              -4.5224,
+              4.2173
+            ],
+            "softmax": [
+              0.0002,
+              0.9998
+            ],
+            "top_id": 1,
+            "top_label": "phishing"
+          },
+          {
+            "input": "http://192.0.2.10/bank/login.php?user=verify&session=8813",
+            "expected_by_hand": "phishing",
+            "tokens": 29,
+            "logits": [
+              -4.4656,
+              4.1389
+            ],
+            "softmax": [
+              0.0002,
+              0.9998
+            ],
+            "top_id": 1,
+            "top_label": "phishing"
+          },
+          {
+            "input": "http://example-bank-security-alert.example.com/confirm/account/password-reset",
+            "expected_by_hand": "phishing",
+            "tokens": 25,
+            "logits": [
+              -4.4136,
+              4.009
+            ],
+            "softmax": [
+              0.0002,
+              0.9998
+            ],
+            "top_id": 1,
+            "top_label": "phishing"
+          }
+        ],
+        "unk_check": [
+          {
+            "input": "https://www.example.com/login",
+            "tokens": [
+              "https",
+              ":",
+              "/",
+              "/",
+              "www",
+              ".",
+              "example",
+              ".",
+              "com",
+              "/",
+              "log",
+              "##in"
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "https://www.example.org/docs/getting-started.html",
+            "tokens": [
+              "https",
+              ":",
+              "/",
+              "/",
+              "www",
+              ".",
+              "example",
+              ".",
+              "org",
+              "/",
+              "doc",
+              "##s",
+              "/",
+              "getting",
+              "-",
+              "started",
+              ".",
+              "html"
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "http://192.0.2.10/bank/login.php?user=verify&session=8813",
+            "tokens": [
+              "http",
+              ":",
+              "/",
+              "/",
+              "192",
+              ".",
+              "0",
+              ".",
+              "2",
+              ".",
+              "10",
+              "/",
+              "bank",
+              "/",
+              "log",
+              "##in",
+              ".",
+              "php",
+              "?",
+              "user",
+              "=",
+              "verify",
+              "&",
+              "session",
+              "=",
+              "88",
+              "##13"
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "http://example-bank-security-alert.example.com/confirm/account/password-reset",
+            "tokens": [
+              "http",
+              ":",
+              "/",
+              "/",
+              "example",
+              "-",
+              "bank",
+              "-",
+              "security",
+              "-",
+              "alert",
+              ".",
+              "example",
+              ".",
+              "com",
+              "/",
+              "confirm",
+              "/",
+              "account",
+              "/",
+              "password",
+              "-",
+              "reset"
+            ],
+            "unk_count": 0
+          }
+        ],
+        "samples_scheme_stripped": [
+          {
+            "input": "www.example.com/login",
+            "expected_by_hand": "benign",
+            "tokens": 10,
+            "logits": [
+              4.5466,
+              -3.3375
+            ],
+            "softmax": [
+              0.9996,
+              0.0004
+            ],
+            "top_id": 0,
+            "top_label": "benign"
+          },
+          {
+            "input": "www.example.org/docs/getting-started.html",
+            "expected_by_hand": "benign",
+            "tokens": 16,
+            "logits": [
+              4.8943,
+              -3.6991
+            ],
+            "softmax": [
+              0.9998,
+              0.0002
+            ],
+            "top_id": 0,
+            "top_label": "benign"
+          },
+          {
+            "input": "accounts.example.org/signin",
+            "expected_by_hand": "benign",
+            "tokens": 10,
+            "logits": [
+              3.0204,
+              -2.1866
+            ],
+            "softmax": [
+              0.9946,
+              0.0054
+            ],
+            "top_id": 0,
+            "top_label": "benign"
+          },
+          {
+            "input": "secure-paypa1-account-verify.example.net/update",
+            "expected_by_hand": "phishing",
+            "tokens": 17,
+            "logits": [
+              -4.4819,
+              4.1981
+            ],
+            "softmax": [
+              0.0002,
+              0.9998
+            ],
+            "top_id": 1,
+            "top_label": "phishing"
+          },
+          {
+            "input": "192.0.2.10/bank/login.php?user=verify&session=8813",
+            "expected_by_hand": "phishing",
+            "tokens": 25,
+            "logits": [
+              -4.4302,
+              4.1178
+            ],
+            "softmax": [
+              0.0002,
+              0.9998
+            ],
+            "top_id": 1,
+            "top_label": "phishing"
+          },
+          {
+            "input": "example-bank-security-alert.example.com/confirm/account/password-reset",
+            "expected_by_hand": "phishing",
+            "tokens": 21,
+            "logits": [
+              -4.2365,
+              3.6078
+            ],
+            "softmax": [
+              0.0004,
+              0.9996
+            ],
+            "top_id": 1,
+            "top_label": "phishing"
+          }
+        ],
+        "memory_end": {
+          "rss_mb": 1840.5,
+          "peak_working_set_mb": 1842.3
+        },
+        "status": "WORKS",
+        "python_warnings": []
+      }
+    },
+    {
+      "repo_id": "pirocheto/phishing-url-detection",
+      "branch": "url",
+      "revision": "44f3b19f705b52532e0aadf3d0d15dd892b8a2fb",
+      "licence_from_card_metadata": "mit",
+      "gated": false,
+      "card_datasets": [
+        "pirocheto/phishing-url"
+      ],
+      "card_base_model": null,
+      "repo_total_bytes_all_files": 40622117,
+      "download": {
+        "status": "OK",
+        "revision": "44f3b19f705b52532e0aadf3d0d15dd892b8a2fb",
+        "download_seconds": 2.58,
+        "downloaded_bytes_on_disk": 23554346,
+        "files_present": [
+          "README.md",
+          "config.json",
+          "model.onnx"
+        ],
+        "weights_format": "pytorch_bin_or_other"
+      },
+      "download_first_attempt": {
+        "status": "OK",
+        "revision": "44f3b19f705b52532e0aadf3d0d15dd892b8a2fb",
+        "download_seconds": 2.58,
+        "downloaded_bytes_on_disk": 23554346,
+        "files_present": [
+          "README.md",
+          "config.json",
+          "model.onnx"
+        ],
+        "weights_format": "pytorch_bin_or_other"
+      },
+      "bench": {
+        "repo_id": "pirocheto/phishing-url-detection",
+        "revision": "44f3b19f705b52532e0aadf3d0d15dd892b8a2fb",
+        "kind": "onnx_url",
+        "env": {
+          "python": "3.11.3",
+          "torch": "2.2.2+cpu",
+          "transformers": "4.48.0",
+          "device": "cpu",
+          "logical_cpus": 16,
+          "offline_mode": "1"
+        },
+        "import_ms": {
+          "torch": 1179.3,
+          "transformers_and_model_classes": 347.7,
+          "total": 1526.9,
+          "USE_TORCH_env": null
+        },
+        "memory_before_load": {
+          "rss_mb": 187.7,
+          "peak_working_set_mb": 187.7
+        },
+        "onnxruntime_version": "1.24.4",
+        "load_ms": {
+          "total": 610.2
+        },
+        "onnx_inputs": [
+          [
+            "inputs",
+            "tensor(string)",
+            "[None]"
+          ]
+        ],
+        "onnx_outputs": [
+          [
+            "label",
+            "tensor(int64)",
+            "[None]"
+          ],
+          [
+            "probabilities",
+            "tensor(float)",
+            "[None, 2]"
+          ]
+        ],
+        "params": null,
+        "params_note": "Not a neural network. TF-IDF features plus linear SVM exported to ONNX, parameter count not computed.",
+        "id2label": {
+          "0": "legitimate (column 0 of probabilities)",
+          "1": "phishing (column 1 of probabilities)"
+        },
+        "memory_after_load": {
+          "rss_mb": 437.2,
+          "peak_working_set_mb": 462.0
+        },
+        "cold_first_inference_ms": 2.6,
+        "warm_short_inputs": {
+          "runs": 30,
+          "median_ms": 1.89,
+          "mean_ms": 2.11,
+          "min_ms": 1.6,
+          "p95_ms": 3.15,
+          "max_ms": 4.37
+        },
+        "samples": [
+          {
+            "input": "https://www.example.com/login",
+            "expected_by_hand": "benign",
+            "raw_label_output": "[1]",
+            "probabilities": [
+              0.4824,
+              0.5176
+            ]
+          },
+          {
+            "input": "https://www.example.org/docs/getting-started.html",
+            "expected_by_hand": "benign",
+            "raw_label_output": "[0]",
+            "probabilities": [
+              0.9609,
+              0.0391
+            ]
+          },
+          {
+            "input": "https://accounts.example.org/signin",
+            "expected_by_hand": "benign",
+            "raw_label_output": "[1]",
+            "probabilities": [
+              0.2555,
+              0.7445
+            ]
+          },
+          {
+            "input": "http://secure-paypa1-account-verify.example.net/update",
+            "expected_by_hand": "phishing",
+            "raw_label_output": "[1]",
+            "probabilities": [
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "input": "http://192.0.2.10/bank/login.php?user=verify&session=8813",
+            "expected_by_hand": "phishing",
+            "raw_label_output": "[1]",
+            "probabilities": [
+              0.0001,
+              0.9999
+            ]
+          },
+          {
+            "input": "http://example-bank-security-alert.example.com/confirm/account/password-reset",
+            "expected_by_hand": "phishing",
+            "raw_label_output": "[1]",
+            "probabilities": [
+              0.0998,
+              0.9002
+            ]
+          }
+        ],
+        "samples_scheme_stripped": [
+          {
+            "input": "www.example.com/login",
+            "expected_by_hand": "benign",
+            "raw_label_output": "[1]",
+            "probabilities": [
+              0.0045,
+              0.9955
+            ]
+          },
+          {
+            "input": "www.example.org/docs/getting-started.html",
+            "expected_by_hand": "benign",
+            "raw_label_output": "[0]",
+            "probabilities": [
+              0.5437,
+              0.4563
+            ]
+          },
+          {
+            "input": "accounts.example.org/signin",
+            "expected_by_hand": "benign",
+            "raw_label_output": "[1]",
+            "probabilities": [
+              0.0313,
+              0.9687
+            ]
+          },
+          {
+            "input": "secure-paypa1-account-verify.example.net/update",
+            "expected_by_hand": "phishing",
+            "raw_label_output": "[1]",
+            "probabilities": [
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "input": "192.0.2.10/bank/login.php?user=verify&session=8813",
+            "expected_by_hand": "phishing",
+            "raw_label_output": "[1]",
+            "probabilities": [
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "input": "example-bank-security-alert.example.com/confirm/account/password-reset",
+            "expected_by_hand": "phishing",
+            "raw_label_output": "[1]",
+            "probabilities": [
+              0.0246,
+              0.9754
+            ]
+          }
+        ],
+        "memory_end": {
+          "rss_mb": 443.1,
+          "peak_working_set_mb": 462.0
+        },
+        "status": "WORKS",
+        "python_warnings": []
+      }
+    },
+    {
+      "repo_id": "kmack/malicious-url-detection",
+      "branch": "url",
+      "revision": "258499831602e1aea6c1f00e8483b820dd14b391",
+      "licence_from_card_metadata": "apache-2.0",
+      "gated": false,
+      "card_datasets": [
+        "kmack/Phishing_urls"
+      ],
+      "card_base_model": null,
+      "repo_total_bytes_all_files": 268779762,
+      "download": {
+        "status": "OK",
+        "revision": "258499831602e1aea6c1f00e8483b820dd14b391",
+        "download_seconds": 10.22,
+        "downloaded_bytes_on_disk": 268778243,
+        "files_present": [
+          "README.md",
+          "config.json",
+          "model.safetensors",
+          "special_tokens_map.json",
+          "tokenizer.json",
+          "tokenizer_config.json",
+          "vocab.txt"
+        ],
+        "weights_format": "safetensors"
+      },
+      "download_first_attempt": {
+        "status": "OK",
+        "revision": "258499831602e1aea6c1f00e8483b820dd14b391",
+        "download_seconds": 10.22,
+        "downloaded_bytes_on_disk": 268778243,
+        "files_present": [
+          "README.md",
+          "config.json",
+          "model.safetensors",
+          "special_tokens_map.json",
+          "tokenizer.json",
+          "tokenizer_config.json",
+          "vocab.txt"
+        ],
+        "weights_format": "safetensors"
+      },
+      "bench": {
+        "repo_id": "kmack/malicious-url-detection",
+        "revision": "258499831602e1aea6c1f00e8483b820dd14b391",
+        "kind": "seqcls_url",
+        "env": {
+          "python": "3.11.3",
+          "torch": "2.2.2+cpu",
+          "transformers": "4.48.0",
+          "device": "cpu",
+          "logical_cpus": 16,
+          "offline_mode": "1"
+        },
+        "import_ms": {
+          "torch": 1504.0,
+          "transformers_and_model_classes": 6294.5,
+          "total": 7798.5,
+          "USE_TORCH_env": null
+        },
+        "memory_before_load": {
+          "rss_mb": 598.2,
+          "peak_working_set_mb": 598.2
+        },
+        "torch_threads": 8,
+        "load_ms": {
+          "tokenizer": 25.0,
+          "model": 80.3,
+          "total": 105.4,
+          "model_reload_same_process": 22.9
+        },
+        "tokenizer_class": "DistilBertTokenizerFast",
+        "model_class": "DistilBertForSequenceClassification",
+        "params": 66955010,
+        "id2label": {
+          "0": "BENIGN",
+          "1": "MALWARE"
+        },
+        "problem_type": "single_label_classification",
+        "max_position_embeddings": 512,
+        "tokenizer_model_max_length": 1000000000,
+        "max_length_used": 512,
+        "memory_after_load": {
+          "rss_mb": 611.3,
+          "peak_working_set_mb": 611.3
+        },
+        "cold_first_inference_ms": 37.5,
+        "warm_short_inputs": {
+          "runs": 30,
+          "median_ms": 22.4,
+          "mean_ms": 22.44,
+          "min_ms": 17.55,
+          "p95_ms": 28.54,
+          "max_ms": 30.42
+        },
+        "samples": [
+          {
+            "input": "https://www.example.com/login",
+            "expected_by_hand": "benign",
+            "tokens": 14,
+            "logits": [
+              -1.2207,
+              1.4049
+            ],
+            "softmax": [
+              0.0675,
+              0.9325
+            ],
+            "top_id": 1,
+            "top_label": "MALWARE"
+          },
+          {
+            "input": "https://www.example.org/docs/getting-started.html",
+            "expected_by_hand": "benign",
+            "tokens": 20,
+            "logits": [
+              1.4517,
+              -1.5324
+            ],
+            "softmax": [
+              0.9519,
+              0.0481
+            ],
+            "top_id": 0,
+            "top_label": "BENIGN"
+          },
+          {
+            "input": "https://accounts.example.org/signin",
+            "expected_by_hand": "benign",
+            "tokens": 14,
+            "logits": [
+              -2.9203,
+              3.0624
+            ],
+            "softmax": [
+              0.0025,
+              0.9975
+            ],
+            "top_id": 1,
+            "top_label": "MALWARE"
+          },
+          {
+            "input": "http://secure-paypa1-account-verify.example.net/update",
+            "expected_by_hand": "phishing",
+            "tokens": 21,
+            "logits": [
+              -4.0186,
+              4.1085
+            ],
+            "softmax": [
+              0.0003,
+              0.9997
+            ],
+            "top_id": 1,
+            "top_label": "MALWARE"
+          },
+          {
+            "input": "http://192.0.2.10/bank/login.php?user=verify&session=8813",
+            "expected_by_hand": "phishing",
+            "tokens": 29,
+            "logits": [
+              -3.6428,
+              3.7419
+            ],
+            "softmax": [
+              0.0006,
+              0.9994
+            ],
+            "top_id": 1,
+            "top_label": "MALWARE"
+          },
+          {
+            "input": "http://example-bank-security-alert.example.com/confirm/account/password-reset",
+            "expected_by_hand": "phishing",
+            "tokens": 25,
+            "logits": [
+              -3.7978,
+              3.9054
+            ],
+            "softmax": [
+              0.0005,
+              0.9995
+            ],
+            "top_id": 1,
+            "top_label": "MALWARE"
+          }
+        ],
+        "unk_check": [
+          {
+            "input": "https://www.example.com/login",
+            "tokens": [
+              "https",
+              ":",
+              "/",
+              "/",
+              "www",
+              ".",
+              "example",
+              ".",
+              "com",
+              "/",
+              "log",
+              "##in"
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "https://www.example.org/docs/getting-started.html",
+            "tokens": [
+              "https",
+              ":",
+              "/",
+              "/",
+              "www",
+              ".",
+              "example",
+              ".",
+              "org",
+              "/",
+              "doc",
+              "##s",
+              "/",
+              "getting",
+              "-",
+              "started",
+              ".",
+              "html"
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "http://192.0.2.10/bank/login.php?user=verify&session=8813",
+            "tokens": [
+              "http",
+              ":",
+              "/",
+              "/",
+              "192",
+              ".",
+              "0",
+              ".",
+              "2",
+              ".",
+              "10",
+              "/",
+              "bank",
+              "/",
+              "log",
+              "##in",
+              ".",
+              "php",
+              "?",
+              "user",
+              "=",
+              "verify",
+              "&",
+              "session",
+              "=",
+              "88",
+              "##13"
+            ],
+            "unk_count": 0
+          },
+          {
+            "input": "http://example-bank-security-alert.example.com/confirm/account/password-reset",
+            "tokens": [
+              "http",
+              ":",
+              "/",
+              "/",
+              "example",
+              "-",
+              "bank",
+              "-",
+              "security",
+              "-",
+              "alert",
+              ".",
+              "example",
+              ".",
+              "com",
+              "/",
+              "confirm",
+              "/",
+              "account",
+              "/",
+              "password",
+              "-",
+              "reset"
+            ],
+            "unk_count": 0
+          }
+        ],
+        "samples_scheme_stripped": [
+          {
+            "input": "www.example.com/login",
+            "expected_by_hand": "benign",
+            "tokens": 10,
+            "logits": [
+              -0.8567,
+              1.0146
+            ],
+            "softmax": [
+              0.1334,
+              0.8666
+            ],
+            "top_id": 1,
+            "top_label": "MALWARE"
+          },
+          {
+            "input": "www.example.org/docs/getting-started.html",
+            "expected_by_hand": "benign",
+            "tokens": 16,
+            "logits": [
+              -0.3004,
+              0.3888
+            ],
+            "softmax": [
+              0.3342,
+              0.6658
+            ],
+            "top_id": 1,
+            "top_label": "MALWARE"
+          },
+          {
+            "input": "accounts.example.org/signin",
+            "expected_by_hand": "benign",
+            "tokens": 10,
+            "logits": [
+              -1.5015,
+              1.7375
+            ],
+            "softmax": [
+              0.0377,
+              0.9623
+            ],
+            "top_id": 1,
+            "top_label": "MALWARE"
+          },
+          {
+            "input": "secure-paypa1-account-verify.example.net/update",
+            "expected_by_hand": "phishing",
+            "tokens": 17,
+            "logits": [
+              -3.195,
+              3.449
+            ],
+            "softmax": [
+              0.0013,
+              0.9987
+            ],
+            "top_id": 1,
+            "top_label": "MALWARE"
+          },
+          {
+            "input": "192.0.2.10/bank/login.php?user=verify&session=8813",
+            "expected_by_hand": "phishing",
+            "tokens": 25,
+            "logits": [
+              -2.3368,
+              2.6138
+            ],
+            "softmax": [
+              0.007,
+              0.993
+            ],
+            "top_id": 1,
+            "top_label": "MALWARE"
+          },
+          {
+            "input": "example-bank-security-alert.example.com/confirm/account/password-reset",
+            "expected_by_hand": "phishing",
+            "tokens": 21,
+            "logits": [
+              -3.5116,
+              3.7105
+            ],
+            "softmax": [
+              0.0007,
+              0.9993
+            ],
+            "top_id": 1,
+            "top_label": "MALWARE"
+          }
+        ],
+        "memory_end": {
+          "rss_mb": 799.3,
+          "peak_working_set_mb": 799.6
+        },
+        "status": "WORKS",
+        "python_warnings": []
+      }
+    },
+    {
+      "repo_id": "openai/clip-vit-base-patch32",
+      "branch": "image",
+      "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+      "licence_from_card_metadata": null,
+      "gated": false,
+      "card_datasets": null,
+      "card_base_model": null,
+      "repo_total_bytes_all_files": 1819546255,
+      "download": {
+        "status": "OK",
+        "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+        "download_seconds": 0.9,
+        "downloaded_bytes_on_disk": 608871522,
+        "files_present": [
+          "README.md",
+          "config.json",
+          "merges.txt",
+          "preprocessor_config.json",
+          "pytorch_model.bin",
+          "special_tokens_map.json",
+          "tokenizer.json",
+          "tokenizer_config.json",
+          "vocab.json"
+        ],
+        "weights_format": "pytorch_bin_or_other"
+      },
+      "download_first_attempt": {
+        "status": "ERROR",
+        "error": "OSError(22, 'A required privilege is not held by the client')"
+      },
+      "bench": {
+        "repo_id": "openai/clip-vit-base-patch32",
+        "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+        "kind": "clip",
+        "env": {
+          "python": "3.11.3",
+          "torch": "2.2.2+cpu",
+          "transformers": "4.48.0",
+          "device": "cpu",
+          "logical_cpus": 16,
+          "offline_mode": "1"
+        },
+        "import_ms": {
+          "torch": 1169.8,
+          "transformers_and_model_classes": 6193.0,
+          "total": 7362.8,
+          "USE_TORCH_env": null
+        },
+        "memory_before_load": {
+          "rss_mb": 597.5,
+          "peak_working_set_mb": 597.5
+        },
+        "torch_threads": 8,
+        "load_ms": {
+          "processor": 231.0,
+          "model": 134.0,
+          "total": 365.1,
+          "model_reload_same_process": 155.2
+        },
+        "image_processor_class": "CLIPImageProcessor",
+        "params": 151277313,
+        "params_vision_tower": 87849216,
+        "params_text_tower": 63428096,
+        "id2label": null,
+        "projection_dim": 512,
+        "memory_after_load": {
+          "rss_mb": 622.9,
+          "peak_working_set_mb": 650.1
+        },
+        "cold_first_inference_ms": 184.6,
+        "zero_shot": {
+          "warm_full_text_plus_image": {
+            "runs": 30,
+            "median_ms": 123.08,
+            "mean_ms": 124.25,
+            "min_ms": 116.81,
+            "p95_ms": 133.21,
+            "max_ms": 137.92
+          },
+          "prompts_pair": [
+            "a login page asking for a password",
+            "an ordinary web page"
+          ],
+          "prompts_set": [
+            "a screenshot of a login page asking for a password",
+            "a screenshot of a web page asking for credit card details",
+            "a screenshot of a text message asking to confirm card details",
+            "a screenshot of a news article or blog post",
+            "a screenshot of a table of information"
+          ],
+          "samples_pair": [
+            {
+              "image": "images/article_page.png",
+              "cosine": [
+                0.2,
+                0.2578
+              ],
+              "softmax": [
+                0.0031,
+                0.9969
+              ]
+            },
+            {
+              "image": "images/login_form.png",
+              "cosine": [
+                0.3259,
+                0.2575
+              ],
+              "softmax": [
+                0.9989,
+                0.0011
+              ]
+            },
+            {
+              "image": "images/sms_parcel.png",
+              "cosine": [
+                0.2417,
+                0.25
+              ],
+              "softmax": [
+                0.3032,
+                0.6968
+              ]
+            },
+            {
+              "image": "images/timetable_page.png",
+              "cosine": [
+                0.1933,
+                0.2234
+              ],
+              "softmax": [
+                0.0471,
+                0.9529
+              ]
+            }
+          ],
+          "samples_set": [
+            {
+              "image": "images/article_page.png",
+              "cosine": [
+                0.1998,
+                0.1899,
+                0.1725,
+                0.2634,
+                0.2423
+              ],
+              "softmax": [
+                0.0015,
+                0.0006,
+                0.0001,
+                0.8897,
+                0.1081
+              ],
+              "top_prompt": "a screenshot of a news article or blog post"
+            },
+            {
+              "image": "images/login_form.png",
+              "cosine": [
+                0.327,
+                0.2864,
+                0.2535,
+                0.221,
+                0.23
+              ],
+              "softmax": [
+                0.9824,
+                0.0168,
+                0.0006,
+                0.0,
+                0.0001
+              ],
+              "top_prompt": "a screenshot of a login page asking for a password"
+            },
+            {
+              "image": "images/sms_parcel.png",
+              "cosine": [
+                0.2414,
+                0.2557,
+                0.2757,
+                0.2321,
+                0.2542
+              ],
+              "softmax": [
+                0.0249,
+                0.104,
+                0.7717,
+                0.0098,
+                0.0896
+              ],
+              "top_prompt": "a screenshot of a text message asking to confirm card details"
+            },
+            {
+              "image": "images/timetable_page.png",
+              "cosine": [
+                0.2141,
+                0.2131,
+                0.211,
+                0.2094,
+                0.2643
+              ],
+              "softmax": [
+                0.0064,
+                0.0059,
+                0.0047,
+                0.004,
+                0.9789
+              ],
+              "top_prompt": "a screenshot of a table of information"
+            }
+          ],
+          "logit_scale": 100.0,
+          "text_prompt_encoding_ms_pair_once": 24.4
+        },
+        "image_embeddings": {
+          "warm_image_only": {
+            "runs": 30,
+            "median_ms": 100.59,
+            "mean_ms": 102.48,
+            "min_ms": 92.16,
+            "p95_ms": 114.12,
+            "max_ms": 114.62
+          },
+          "samples": [
+            {
+              "image": "images/article_page.png",
+              "dim": 512,
+              "dtype": "float32",
+              "l2_norm_after_normalisation": 1.0,
+              "first5": [
+                0.0078,
+                0.042,
+                0.0074,
+                -0.0459,
+                0.0308
+              ]
+            },
+            {
+              "image": "images/login_form.png",
+              "dim": 512,
+              "dtype": "float32",
+              "l2_norm_after_normalisation": 1.0,
+              "first5": [
+                0.0538,
+                -0.0185,
+                -0.0144,
+                -0.0085,
+                -0.0077
+              ]
+            },
+            {
+              "image": "images/sms_parcel.png",
+              "dim": 512,
+              "dtype": "float32",
+              "l2_norm_after_normalisation": 1.0,
+              "first5": [
+                0.0131,
+                0.0354,
+                0.0073,
+                -0.0246,
+                0.0027
+              ]
+            },
+            {
+              "image": "images/timetable_page.png",
+              "dim": 512,
+              "dtype": "float32",
+              "l2_norm_after_normalisation": 1.0,
+              "first5": [
+                -0.0023,
+                0.0393,
+                -0.0182,
+                0.035,
+                0.0053
+              ]
+            }
+          ],
+          "order": [
+            "article_page.png",
+            "login_form.png",
+            "sms_parcel.png",
+            "timetable_page.png"
+          ],
+          "cosine_similarity_matrix": [
+            [
+              1.0,
+              0.4335,
+              0.4816,
+              0.4176
+            ],
+            [
+              0.4335,
+              1.0,
+              0.7094,
+              0.5055
+            ],
+            [
+              0.4816,
+              0.7094,
+              1.0,
+              0.6297
+            ],
+            [
+              0.4176,
+              0.5055,
+              0.6297,
+              1.0
+            ]
+          ]
+        },
+        "warm_short_inputs": {
+          "runs": 30,
+          "median_ms": 100.59,
+          "mean_ms": 102.48,
+          "min_ms": 92.16,
+          "p95_ms": 114.12,
+          "max_ms": 114.62
+        },
+        "memory_end": {
+          "rss_mb": 1162.7,
+          "peak_working_set_mb": 1182.4
+        },
+        "status": "WORKS",
+        "python_warnings": []
+      }
+    }
+  ],
+  "extra_checks": {
+    "import_time_ms": {
+      "default_env": [
+        "6943.1 ['jax', 'tensorflow']",
+        "7033.6 ['jax', 'tensorflow']",
+        "6820.6 ['jax', 'tensorflow']"
+      ],
+      "USE_TORCH=1 USE_TF=0 USE_FLAX=0": [
+        "3733.1 []",
+        "3755.0 []",
+        "3849.6 []"
+      ]
+    },
+    "pull_request_refs": {
+      "ealvaradob/bert-finetuned-phishing": {
+        "pull_requests": 1,
+        "with_safetensors": [
+          {
+            "ref": "refs/pr/4",
+            "commit": "c3b5557fd94f1d97ac269bac1eebbae60e54a1d4"
+          }
+        ]
+      },
+      "openai/clip-vit-base-patch32": {
+        "pull_requests": 57,
+        "with_safetensors": [
+          {
+            "ref": "refs/pr/66",
+            "commit": "c237dc49a33fc61debc9276459120b7eac67e7ef"
+          },
+          {
+            "ref": "refs/pr/62",
+            "commit": "37000f5cdccec47a3f6f83142bff131370757470"
+          },
+          {
+            "ref": "refs/pr/61",
+            "commit": "a68f74976de48b74d683037f8407f464f63e3d09"
+          },
+          {
+            "ref": "refs/pr/60",
+            "commit": "a78544bddd3e1ce771f5cfcef4bb1e099240e19c"
+          },
+          {
+            "ref": "refs/pr/59",
+            "commit": "eaee4c876b93e66f7fac584b529025a96d71ad66"
+          },
+          {
+            "ref": "refs/pr/58",
+            "commit": "aa8b329a670ccfc2a5170d7391ac3fca2e88595f"
+          },
+          {
+            "ref": "refs/pr/57",
+            "commit": "e4b57025458bf5454b0de44068e7cdce28218bc9"
+          },
+          {
+            "ref": "refs/pr/56",
+            "commit": "55072b9dd65c9cdd77ed2e8d2270a0ce0a589c54"
+          },
+          {
+            "ref": "refs/pr/55",
+            "commit": "1f3798556f2514949577d1cfa5b1ca2d9a29545f"
+          },
+          {
+            "ref": "refs/pr/54",
+            "commit": "7acf2b9424441aa2421c44f2222c14d2c540cbdd"
+          },
+          {
+            "ref": "refs/pr/53",
+            "commit": "4cc56155249b33c56cf4c00db1cb66c4462cd17a"
+          },
+          {
+            "ref": "refs/pr/52",
+            "commit": "956a7bc8f1ec4aafae6641bad9bb09b84d0a70d9"
+          },
+          {
+            "ref": "refs/pr/51",
+            "commit": "b97b0100e55e367c057773c2a614676470b0d575"
+          },
+          {
+            "ref": "refs/pr/50",
+            "commit": "9958ed3864508378e086a340022b2f67cbf0d0f5"
+          },
+          {
+            "ref": "refs/pr/49",
+            "commit": "47394b86939e3654939538c5dd7097e36ea16a0c"
+          },
+          {
+            "ref": "refs/pr/48",
+            "commit": "9f35da2142fb5af74b048b4d03e32dcb6282c270"
+          },
+          {
+            "ref": "refs/pr/47",
+            "commit": "1eb3500bd3c0fdf36230978ffe034b575579fff6"
+          },
+          {
+            "ref": "refs/pr/46",
+            "commit": "378e8f211ca4a3b4d2476e17e3351d9c88a203ae"
+          },
+          {
+            "ref": "refs/pr/45",
+            "commit": "8dad23d653361bb136507c8bb2a97b57c844b8ff"
+          },
+          {
+            "ref": "refs/pr/44",
+            "commit": "1bb210203970f4b4268b29dab3dc7e27c3d3c7ee"
+          },
+          {
+            "ref": "refs/pr/43",
+            "commit": "d55bc54265e2ab9c84d56f001de9edc81f5a5ee3"
+          },
+          {
+            "ref": "refs/pr/42",
+            "commit": "c7244be81152024ce0e99ac8d2e373a8953d9f9a"
+          },
+          {
+            "ref": "refs/pr/41",
+            "commit": "e5af27227555d0743931fe022f3b1684d58d4e18"
+          },
+          {
+            "ref": "refs/pr/40",
+            "commit": "be35e1cf6ab51bb4daa2b1db53e9f543d4544b47"
+          },
+          {
+            "ref": "refs/pr/39",
+            "commit": "43507aab313877c94887e8d16d5fc704770721bc"
+          },
+          {
+            "ref": "refs/pr/38",
+            "commit": "969cf02e0778b9b03ea2ce9e17280ff641598348"
+          },
+          {
+            "ref": "refs/pr/37",
+            "commit": "740af00c69dc8d79fa7b16d6b49047d3236eef32"
+          },
+          {
+            "ref": "refs/pr/36",
+            "commit": "73dbca08b5ed269745580e3f9ad88ddbbff8621d"
+          },
+          {
+            "ref": "refs/pr/35",
+            "commit": "9cbdd7b8d9fc6e972b86a1291768b765ccd28073"
+          },
+          {
+            "ref": "refs/pr/34",
+            "commit": "bfc19449bc6f18c54292b85378cbccc3ad91a24e"
+          },
+          {
+            "ref": "refs/pr/33",
+            "commit": "d44250afa9f05af7eca021052567539406661018"
+          },
+          {
+            "ref": "refs/pr/32",
+            "commit": "fb066271b2977607c9d003ba1c2d8830bc8d73f9"
+          },
+          {
+            "ref": "refs/pr/29",
+            "commit": "aba0d2990c5c81a51290b5e895dda8237b39e0be"
+          },
+          {
+            "ref": "refs/pr/28",
+            "commit": "d2bce4bc6684fb94eb627c995ba3164d618ef0f7"
+          },
+          {
+            "ref": "refs/pr/27",
+            "commit": "bf8895cff1da285aa497db31204d14464adcaa7c"
+          },
+          {
+            "ref": "refs/pr/26",
+            "commit": "d15b5f29721ca72dac15f8526b284be910de18be"
+          },
+          {
+            "ref": "refs/pr/25",
+            "commit": "fbf5e647b25f3514e526849b05cc0196b206d822"
+          },
+          {
+            "ref": "refs/pr/24",
+            "commit": "f85caf0ad40f6f6719a8d5d043c84c0dcbd3f303"
+          },
+          {
+            "ref": "refs/pr/23",
+            "commit": "93c739f3ac351a1c5537eeb143582c6bb7cc51b8"
+          },
+          {
+            "ref": "refs/pr/21",
+            "commit": "13fe208b3396643470c94b927a457ea4bae45c82"
+          },
+          {
+            "ref": "refs/pr/15",
+            "commit": "b33cedfd0df4e43b8238760678fcc89e1a0d38b3"
+          },
+          {
+            "ref": "refs/pr/3",
+            "commit": "b527df4b30e5cc18bde1cc712833a741d2d8c362"
+          }
+        ]
+      }
+    },
+    "transformers_torch_load": {
+      "weights_only_mentions": 24,
+      "lines": [
+        "weights_only_kwarg = {\"weights_only\": True}",
+        "loader = safe_load_file if load_safe else partial(torch.load, map_location=\"cpu\", **weights_only_kwarg)",
+        "weights_only: bool = True,",
+        "weights_only_kwarg = {\"weights_only\": weights_only}",
+        "**weights_only_kwarg,",
+        "weights_only: bool = True,",
+        "weights_only (`bool`, *optional*, defaults to `True`):",
+        "weights_only=weights_only,",
+        "state_dict = load_state_dict(resolved_archive_file, weights_only=weights_only)",
+        "one_state_dict = load_state_dict(resolved_archive_file[0], weights_only=weights_only)",
+        "weights_only=weights_only,",
+        "weights_only=True,"
+      ]
+    },
+    "dataset_cards": {
+      "ealvaradob/phishing-dataset": {
+        "revision": "55caf9af01ae498d68ff44886ff69a4b165eb54b",
+        "licence": "apache-2.0",
+        "gated": false,
+        "files": [
+          ".gitattributes",
+          "README.md",
+          "combined_full.json",
+          "combined_reduced.json",
+          "gitattributes",
+          "phishing-dataset.py",
+          "texts.json",
+          "urls.json",
+          "webs.json"
+        ],
+        "card_chars": 6752
+      },
+      "cybersectony/PhishingEmailDetectionv2.0": {
+        "revision": "afba38f4a7ffbe89259ab68ae7c6426f944496cc",
+        "licence": null,
+        "gated": false,
+        "files": [
+          ".gitattributes",
+          "README.md",
+          "data/test-00000-of-00001.parquet",
+          "data/train-00000-of-00001.parquet",
+          "data/validation-00000-of-00001.parquet"
+        ],
+        "card_chars": 1366
+      },
+      "zefang-liu/phishing-email-dataset": {
+        "revision": "34085a032c123ca237f314a01a67909cdea35e34",
+        "licence": "lgpl-3.0",
+        "gated": false,
+        "files": [
+          ".gitattributes",
+          "Phishing_Email.csv",
+          "README.md"
+        ],
+        "card_chars": 616
+      },
+      "pirocheto/phishing-url": {
+        "revision": "1375d450d4540205ac11781b807249c9509739cd",
+        "licence": "cc-by-4.0",
+        "gated": false,
+        "files": [
+          ".gitattributes",
+          "2010.12847.pdf",
+          "README.md",
+          "data/test.parquet",
+          "data/train.parquet",
+          "images/source_data.png"
+        ],
+        "card_chars": 3140
+      },
+      "kmack/Phishing_urls": {
+        "revision": "ef1558ba51b6b3e1a2c264ec8227be0a08736e10",
+        "licence": null,
+        "gated": false,
+        "files": [
+          ".gitattributes",
+          "README.md",
+          "data/test-00000-of-00001-4d6cbda5297196e7.parquet",
+          "data/train-00000-of-00001-d8afc95a165ea87b.parquet",
+          "data/valid-00000-of-00001-4e1abfe96aa382c2.parquet"
+        ],
+        "card_chars": 518
+      }
+    }
+  },
+  "notes": [
+    "All timings are CPU only, torch 2.2.2+cpu, transformers 4.48.0, 8 torch threads, model files already in the operating system file cache.",
+    "download.download_seconds for repos whose first attempt failed is the time of the retry only, not a full download time.",
+    "expected_by_hand labels are hand judgements on 6 toy inputs per branch. They are not an evaluation set."
+  ]
+}

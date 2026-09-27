@@ -1,0 +1,693 @@
+{
+  "ealvaradob/bert-finetuned-phishing": {
+    "branch": "text",
+    "repo_id": "ealvaradob/bert-finetuned-phishing",
+    "revision": "fa8fb73a007174c410ab7160d4e4c6e6b8d998d4",
+    "gated": false,
+    "private": false,
+    "pipeline_tag": "text-classification",
+    "library_name": "transformers",
+    "downloads": 3545,
+    "last_modified": "2024-02-07 05:11:47+00:00",
+    "licence": "apache-2.0",
+    "card_datasets": [
+      "ealvaradob/phishing-dataset"
+    ],
+    "card_base_model": "bert-large-uncased",
+    "tags": [
+      "transformers",
+      "pytorch",
+      "bert",
+      "text-classification",
+      "generated_from_trainer",
+      "phishing",
+      "BERT",
+      "en",
+      "dataset:ealvaradob/phishing-dataset",
+      "base_model:google-bert/bert-large-uncased",
+      "base_model:finetune:google-bert/bert-large-uncased",
+      "license:apache-2.0",
+      "text-embeddings-inference",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "files": [
+      {
+        "name": ".gitattributes",
+        "bytes": 1519
+      },
+      {
+        "name": "README.md",
+        "bytes": 4057
+      },
+      {
+        "name": "config.json",
+        "bytes": 845
+      },
+      {
+        "name": "gitattributes",
+        "bytes": 1519
+      },
+      {
+        "name": "pytorch_model.bin",
+        "bytes": 1340710638
+      },
+      {
+        "name": "special_tokens_map.json",
+        "bytes": 125
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 711396
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 1190
+      },
+      {
+        "name": "training_args.bin",
+        "bytes": 4536
+      },
+      {
+        "name": "vocab.txt",
+        "bytes": 231508
+      }
+    ],
+    "repo_total_bytes": 1341667333,
+    "card_chars": 4057,
+    "metadata_status": "OK"
+  },
+  "cybersectony/phishing-email-detection-distilbert_v2.4.1": {
+    "branch": "text",
+    "repo_id": "cybersectony/phishing-email-detection-distilbert_v2.4.1",
+    "revision": "6724dec17360ab1f6450553f1d950404f66a5dde",
+    "gated": false,
+    "private": false,
+    "pipeline_tag": "text-classification",
+    "library_name": "transformers",
+    "downloads": 304859,
+    "last_modified": "2024-10-28 10:02:55+00:00",
+    "licence": "apache-2.0",
+    "card_datasets": [
+      "cybersectony/PhishingEmailDetectionv2.0"
+    ],
+    "card_base_model": [
+      "distilbert/distilbert-base-uncased"
+    ],
+    "tags": [
+      "transformers",
+      "safetensors",
+      "distilbert",
+      "text-classification",
+      "en",
+      "dataset:cybersectony/PhishingEmailDetectionv2.0",
+      "base_model:distilbert/distilbert-base-uncased",
+      "base_model:finetune:distilbert/distilbert-base-uncased",
+      "license:apache-2.0",
+      "text-embeddings-inference",
+      "endpoints_compatible",
+      "deploy:azure",
+      "region:us"
+    ],
+    "files": [
+      {
+        "name": ".gitattributes",
+        "bytes": 1519
+      },
+      {
+        "name": "README.md",
+        "bytes": 2735
+      },
+      {
+        "name": "config.json",
+        "bytes": 807
+      },
+      {
+        "name": "model.safetensors",
+        "bytes": 267838720
+      },
+      {
+        "name": "special_tokens_map.json",
+        "bytes": 125
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 711661
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 1196
+      },
+      {
+        "name": "vocab.txt",
+        "bytes": 231508
+      }
+    ],
+    "repo_total_bytes": 268788271,
+    "card_chars": 2735,
+    "metadata_status": "OK"
+  },
+  "aamoshdahal/email-phishing-distilbert-finetuned": {
+    "branch": "text",
+    "repo_id": "aamoshdahal/email-phishing-distilbert-finetuned",
+    "revision": "f9d211125fcb6e85cf73630957667bc2a6e93ed3",
+    "gated": false,
+    "private": false,
+    "pipeline_tag": "text-classification",
+    "library_name": "transformers",
+    "downloads": 787,
+    "last_modified": "2025-04-02 00:45:47+00:00",
+    "licence": null,
+    "card_datasets": null,
+    "card_base_model": [
+      "distilbert/distilbert-base-uncased"
+    ],
+    "tags": [
+      "transformers",
+      "safetensors",
+      "distilbert",
+      "text-classification",
+      "phishing-detection",
+      "email-security",
+      "en",
+      "base_model:distilbert/distilbert-base-uncased",
+      "base_model:finetune:distilbert/distilbert-base-uncased",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "files": [
+      {
+        "name": ".gitattributes",
+        "bytes": 1519
+      },
+      {
+        "name": "README.md",
+        "bytes": 7080
+      },
+      {
+        "name": "_Aamosh_Dahal_Phishing_Email_DistilBert.ipynb",
+        "bytes": 1157949
+      },
+      {
+        "name": "config.json",
+        "bytes": 569
+      },
+      {
+        "name": "model.safetensors",
+        "bytes": 267832560
+      },
+      {
+        "name": "special_tokens_map.json",
+        "bytes": 125
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 1278
+      },
+      {
+        "name": "vocab.txt",
+        "bytes": 231508
+      }
+    ],
+    "repo_total_bytes": 269232588,
+    "card_chars": 7039,
+    "metadata_status": "OK"
+  },
+  "ElSlay/BERT-Phishing-Email-Model": {
+    "branch": "text",
+    "repo_id": "ElSlay/BERT-Phishing-Email-Model",
+    "revision": "708d260869707ffdb0227c3c838ce957a736c9d6",
+    "gated": false,
+    "private": false,
+    "pipeline_tag": "text-classification",
+    "library_name": "transformers",
+    "downloads": 589,
+    "last_modified": "2024-12-05 02:00:10+00:00",
+    "licence": null,
+    "card_datasets": [
+      "zefang-liu/phishing-email-dataset"
+    ],
+    "card_base_model": [
+      "google-bert/bert-base-uncased"
+    ],
+    "tags": [
+      "transformers",
+      "safetensors",
+      "bert",
+      "text-classification",
+      "phishing",
+      "email",
+      "detection",
+      "scam",
+      "en",
+      "dataset:zefang-liu/phishing-email-dataset",
+      "base_model:google-bert/bert-base-uncased",
+      "base_model:finetune:google-bert/bert-base-uncased",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "files": [
+      {
+        "name": ".gitattributes",
+        "bytes": 1519
+      },
+      {
+        "name": "README.md",
+        "bytes": 1954
+      },
+      {
+        "name": "config.json",
+        "bytes": 727
+      },
+      {
+        "name": "model.safetensors",
+        "bytes": 437958648
+      },
+      {
+        "name": "special_tokens_map.json",
+        "bytes": 125
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 1242
+      },
+      {
+        "name": "vocab.txt",
+        "bytes": 231508
+      }
+    ],
+    "repo_total_bytes": 438195723,
+    "card_chars": 1954,
+    "metadata_status": "OK"
+  },
+  "CrabInHoney/urlbert-tiny-v4-phishing-classifier": {
+    "branch": "url",
+    "repo_id": "CrabInHoney/urlbert-tiny-v4-phishing-classifier",
+    "revision": "fd962a5cd04e20ceed46aa8a6e31a2b40d4c8916",
+    "gated": false,
+    "private": false,
+    "pipeline_tag": "text-classification",
+    "library_name": null,
+    "downloads": 380,
+    "last_modified": "2026-01-26 11:42:35+00:00",
+    "licence": "apache-2.0",
+    "card_datasets": [
+      "ealvaradob/phishing-dataset"
+    ],
+    "card_base_model": [
+      "CrabInHoney/urlbert-tiny-base-v4"
+    ],
+    "tags": [
+      "safetensors",
+      "bert",
+      "url",
+      "urls",
+      "links",
+      "classification",
+      "tiny",
+      "phishing",
+      "urlbert",
+      "text-classification",
+      "en",
+      "dataset:ealvaradob/phishing-dataset",
+      "base_model:CrabInHoney/urlbert-tiny-base-v4",
+      "base_model:finetune:CrabInHoney/urlbert-tiny-base-v4",
+      "license:apache-2.0",
+      "region:us"
+    ],
+    "files": [
+      {
+        "name": ".gitattributes",
+        "bytes": 1519
+      },
+      {
+        "name": "README.md",
+        "bytes": 2573
+      },
+      {
+        "name": "config.json",
+        "bytes": 701
+      },
+      {
+        "name": "model.safetensors",
+        "bytes": 14760312
+      },
+      {
+        "name": "special_tokens_map.json",
+        "bytes": 695
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 10039
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 1250
+      },
+      {
+        "name": "vocab.txt",
+        "bytes": 1656
+      }
+    ],
+    "repo_total_bytes": 14778745,
+    "card_chars": 2449,
+    "metadata_status": "OK"
+  },
+  "amahdaouy/DomURLs_BERT": {
+    "branch": "url",
+    "repo_id": "amahdaouy/DomURLs_BERT",
+    "revision": "ba5fa28ae1361f8115630e252ac49535ffe3bab1",
+    "gated": false,
+    "private": false,
+    "pipeline_tag": "feature-extraction",
+    "library_name": "transformers",
+    "downloads": 450,
+    "last_modified": "2026-02-05 11:25:28+00:00",
+    "licence": null,
+    "card_datasets": null,
+    "card_base_model": null,
+    "tags": [
+      "transformers",
+      "safetensors",
+      "bert",
+      "feature-extraction",
+      "urls",
+      "domain names",
+      "cybersecurity",
+      "multilingual",
+      "domain generation algorithm",
+      "dga",
+      "phishing",
+      "malware",
+      "DNS tunneling",
+      "urls classification",
+      "domain names classification",
+      "BERT",
+      "Encoder",
+      "arxiv:2409.09143",
+      "arxiv:1910.09700",
+      "text-embeddings-inference",
+      "endpoints_compatible",
+      "deploy:azure",
+      "region:us"
+    ],
+    "files": [
+      {
+        "name": ".gitattributes",
+        "bytes": 1519
+      },
+      {
+        "name": "README.md",
+        "bytes": 7906
+      },
+      {
+        "name": "config.json",
+        "bytes": 618
+      },
+      {
+        "name": "model.safetensors",
+        "bytes": 442491744
+      },
+      {
+        "name": "special_tokens_map.json",
+        "bytes": 788
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 1323609
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 1874
+      }
+    ],
+    "repo_total_bytes": 443828058,
+    "card_chars": 7903,
+    "metadata_status": "OK"
+  },
+  "ealvaradob/bert-phishing-url": {
+    "branch": "url",
+    "repo_id": "ealvaradob/bert-phishing-url",
+    "revision": "1a87f6979f682c1cf0fea476048072f0c5b7c2d0",
+    "gated": false,
+    "private": false,
+    "pipeline_tag": "text-classification",
+    "library_name": "transformers",
+    "downloads": 25,
+    "last_modified": "2024-02-07 04:36:27+00:00",
+    "licence": "apache-2.0",
+    "card_datasets": [
+      "ealvaradob/phishing-dataset"
+    ],
+    "card_base_model": null,
+    "tags": [
+      "transformers",
+      "safetensors",
+      "bert",
+      "text-classification",
+      "dataset:ealvaradob/phishing-dataset",
+      "license:apache-2.0",
+      "text-embeddings-inference",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "files": [
+      {
+        "name": ".gitattributes",
+        "bytes": 1519
+      },
+      {
+        "name": "README.md",
+        "bytes": 575
+      },
+      {
+        "name": "config.json",
+        "bytes": 845
+      },
+      {
+        "name": "model.safetensors",
+        "bytes": 1340622760
+      },
+      {
+        "name": "special_tokens_map.json",
+        "bytes": 125
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 711494
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 1190
+      },
+      {
+        "name": "training_args.bin",
+        "bytes": 4728
+      },
+      {
+        "name": "vocab.txt",
+        "bytes": 231508
+      }
+    ],
+    "repo_total_bytes": 1341574744,
+    "card_chars": 568,
+    "metadata_status": "OK"
+  },
+  "pirocheto/phishing-url-detection": {
+    "branch": "url",
+    "repo_id": "pirocheto/phishing-url-detection",
+    "revision": "44f3b19f705b52532e0aadf3d0d15dd892b8a2fb",
+    "gated": false,
+    "private": false,
+    "pipeline_tag": "text-classification",
+    "library_name": "sklearn",
+    "downloads": 0,
+    "last_modified": "2023-12-01 09:59:20+00:00",
+    "licence": "mit",
+    "card_datasets": [
+      "pirocheto/phishing-url"
+    ],
+    "card_base_model": null,
+    "tags": [
+      "sklearn",
+      "onnx",
+      "text-classification",
+      "phishing",
+      "url",
+      "dataset:pirocheto/phishing-url",
+      "license:mit",
+      "region:us"
+    ],
+    "files": [
+      {
+        "name": ".gitattributes",
+        "bytes": 1519
+      },
+      {
+        "name": "README.md",
+        "bytes": 6195
+      },
+      {
+        "name": "config.json",
+        "bytes": 287
+      },
+      {
+        "name": "model.onnx",
+        "bytes": 23547864
+      },
+      {
+        "name": "model.pkl",
+        "bytes": 17066252
+      }
+    ],
+    "repo_total_bytes": 40622117,
+    "card_chars": 6179,
+    "metadata_status": "OK"
+  },
+  "kmack/malicious-url-detection": {
+    "branch": "url",
+    "repo_id": "kmack/malicious-url-detection",
+    "revision": "258499831602e1aea6c1f00e8483b820dd14b391",
+    "gated": false,
+    "private": false,
+    "pipeline_tag": "text-classification",
+    "library_name": "transformers",
+    "downloads": 6614,
+    "last_modified": "2024-04-26 06:33:48+00:00",
+    "licence": "apache-2.0",
+    "card_datasets": [
+      "kmack/Phishing_urls"
+    ],
+    "card_base_model": null,
+    "tags": [
+      "transformers",
+      "safetensors",
+      "distilbert",
+      "text-classification",
+      "bert",
+      "en",
+      "dataset:kmack/Phishing_urls",
+      "license:apache-2.0",
+      "text-embeddings-inference",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "files": [
+      {
+        "name": ".gitattributes",
+        "bytes": 1519
+      },
+      {
+        "name": "README.md",
+        "bytes": 690
+      },
+      {
+        "name": "config.json",
+        "bytes": 740
+      },
+      {
+        "name": "model.safetensors",
+        "bytes": 267832560
+      },
+      {
+        "name": "special_tokens_map.json",
+        "bytes": 125
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 711396
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 1224
+      },
+      {
+        "name": "vocab.txt",
+        "bytes": 231508
+      }
+    ],
+    "repo_total_bytes": 268779762,
+    "card_chars": 690,
+    "metadata_status": "OK"
+  },
+  "openai/clip-vit-base-patch32": {
+    "branch": "image",
+    "repo_id": "openai/clip-vit-base-patch32",
+    "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "gated": false,
+    "private": false,
+    "pipeline_tag": "zero-shot-image-classification",
+    "library_name": "transformers",
+    "downloads": 21833701,
+    "last_modified": "2024-02-29 09:45:55+00:00",
+    "licence": null,
+    "card_datasets": null,
+    "card_base_model": null,
+    "tags": [
+      "transformers",
+      "pytorch",
+      "tf",
+      "jax",
+      "clip",
+      "zero-shot-image-classification",
+      "vision",
+      "arxiv:2103.00020",
+      "arxiv:1908.04913",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "files": [
+      {
+        "name": ".gitattributes",
+        "bytes": 690
+      },
+      {
+        "name": "README.md",
+        "bytes": 7942
+      },
+      {
+        "name": "config.json",
+        "bytes": 4186
+      },
+      {
+        "name": "flax_model.msgpack",
+        "bytes": 605123003
+      },
+      {
+        "name": "merges.txt",
+        "bytes": 524657
+      },
+      {
+        "name": "preprocessor_config.json",
+        "bytes": 316
+      },
+      {
+        "name": "pytorch_model.bin",
+        "bytes": 605247071
+      },
+      {
+        "name": "special_tokens_map.json",
+        "bytes": 389
+      },
+      {
+        "name": "tf_model.h5",
+        "bytes": 605551040
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2224041
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 592
+      },
+      {
+        "name": "vocab.json",
+        "bytes": 862328
+      }
+    ],
+    "repo_total_bytes": 1819546255,
+    "card_chars": 7930,
+    "metadata_status": "OK"
+  }
+}

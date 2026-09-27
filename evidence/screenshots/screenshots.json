@@ -1,0 +1,29 @@
+{
+  "captured": [
+    {
+      "file": "01_empty_form.png",
+      "description": "Empty form on first load."
+    },
+    {
+      "file": "02_complete_harmless_case.png",
+      "description": "Result panel for a complete harmless case (url + text + screenshot); outcome is 'Limited indicators' with the fitted fusion parameters."
+    },
+    {
+      "file": "06_high_concern_case.png",
+      "description": "Result panel for a complete case built from a suspicious-shaped synthetic URL, an urgent synthetic message, and the fixture login-page screenshot; outcome is 'High concern' with the fitted fusion parameters."
+    },
+    {
+      "file": "03_partial_case_url_only.png",
+      "description": "Result panel for a url-only (partial) case."
+    },
+    {
+      "file": "04_validation_error.png",
+      "description": "Inline validation error for a malformed URL."
+    },
+    {
+      "file": "05_review_needed_case.png",
+      "description": "A case that produced 'Review needed' naturally from mixed evidence."
+    }
+  ],
+  "base_url": "http://127.0.0.1:8011"
+}

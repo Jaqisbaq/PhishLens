@@ -1,0 +1,9 @@
+modality,model,contaminated_on_this_sample,n,average_precision,f1_at_0.5,roc_auc,contamination_note,excluded_reason
+url,CrabInHoney/urlbert-tiny-v4-phishing-classifier (primary),False,400.0,0.8336350844123983,0.7241379310344828,0.7965,,
+url,"kmack/malicious-url-detection (rejected: labels BENIGN/MALWARE, not phishing-specific)",False,400.0,0.9621850091224765,0.8472622478386167,0.9526500000000001,,
+url,"pirocheto/phishing-url-detection (rejected: weak on benign samples in the spike; trained on pirocheto/phishing-url, no overlap with PhiUSIIL known)",False,400.0,0.944699136145782,0.7616099071207431,0.92535,,
+text,ealvaradob/bert-finetuned-phishing (primary),False,400.0,0.9699115903262882,0.9037433155080213,0.9655499999999999,,
+text,aamoshdahal/email-phishing-distilbert-finetuned (rejected: no licence stated),True,400.0,0.999369705486643,0.9875311720698254,0.999375,"trained on Enron, CEAS 2008, Ling-Spam, SpamAssassin, Nazario and Nigerian fraud emails per its card, which includes CEAS_08: this sample partially overlaps its own training data, so its score here is optimistic and not comparable to the other rows",
+text,"ElSlay/BERT-Phishing-Email-Model (rejected: no licence stated, higher latency, no accuracy gain in the spike)",False,400.0,0.975332908274083,0.8997429305912596,0.9769,,
+url,amahdaouy/DomURLs_BERT,,,,,,,no classifier head in the checkpoint (encoder only); would need a labelled URL set and a fitted head before it produces any score
+text,cybersectony/phishing-email-detection-distilbert_v2.4.1,,,,,,,four-class output with no class names in the config or agreement between the model card and dataset card on what the classes mean

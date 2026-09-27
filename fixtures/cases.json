@@ -1,0 +1,17 @@
+{
+  "urls": {
+    "benign_plain": "https://example.com/account/login",
+    "benign_org": "https://example.org/support/help",
+    "benign_ip_doc_range": "http://192.0.2.10/status",
+    "suspicious_shape": "http://192.0.2.44/secure-login-update@example.net/confirm-account-details"
+  },
+  "messages": {
+    "benign": "Hi team, the meeting notes from example.org are attached. See you Monday.",
+    "urgent_style": "URGENT: your account on example.net will be suspended in 24 hours. Confirm your password and card details now at the link below to keep access."
+  },
+  "images": {
+    "login_page": "images/login_page.png",
+    "news_article": "images/news_article.png",
+    "table": "images/table.png"
+  }
+}

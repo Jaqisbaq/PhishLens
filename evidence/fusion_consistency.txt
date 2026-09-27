@@ -1,0 +1,28 @@
+                      id  label  eval_score_learned  app_fused_score  abs_diff       eval_outcome        app_outcome  outcome_match
+6404266e845bed3cfa5ef60e      1            0.829526         0.829526       0.0       High concern       High concern           True
+640593865bd44dc8379638e6      1            0.965020         0.965020       0.0       High concern       High concern           True
+6405973d5bd44dc8379638f2      1            0.997633         0.997633       0.0       High concern       High concern           True
+6405992f5bd44dc8379638f8      1            0.988818         0.988818       0.0       High concern       High concern           True
+6408156d970903ca899c8471      1            0.534250         0.534250       0.0      Review needed      Review needed           True
+641055257151a21ea3e11cdd      1            0.819384         0.819384       0.0       High concern       High concern           True
+641056107151a21ea3e11ce9      1            0.951800         0.951800       0.0       High concern       High concern           True
+641067272986227b69cc3123      1            0.928822         0.928822       0.0       High concern       High concern           True
+64129103ab184a966213bc95      1            0.943539         0.943539       0.0       High concern       High concern           True
+64129137ab184a966213bc97      1            0.689265         0.689265       0.0      Review needed      Review needed           True
+64129231ab184a966213bca9      1            0.697886         0.697886       0.0      Review needed      Review needed           True
+64129697ab184a966213bcdf      1            0.329062         0.329062       0.0 Limited indicators Limited indicators           True
+6414116ba53e312f69f6444d      1            0.707653         0.707653       0.0      Review needed      Review needed           True
+64143898eab361ba393aa6af      1            0.938404         0.938404       0.0       High concern       High concern           True
+64144262eab361ba393aa6ce      1            0.973866         0.973866       0.0       High concern       High concern           True
+64144661eab361ba393aa6dd      1            0.855977         0.855977       0.0       High concern       High concern           True
+6414769beab361ba393aa78d      1            0.925163         0.925163       0.0       High concern       High concern           True
+641512757a842bb449d7a162      1            0.961005         0.961005       0.0       High concern       High concern           True
+641520197a842bb449d7a1ad      1            0.888326         0.888326       0.0       High concern       High concern           True
+641551277a842bb449d7a26f      1            0.686346         0.686346       0.0      Review needed      Review needed           True
+
+n_cases: 20
+max_abs_score_diff: 0.000e+00
+all_outcomes_match: True
+fusion_config_fitted: True method: learned
+thresholds: {'low': 0.3519, 'high': 0.7633} disagreement_gap: 0.9967
+RESULT: PASS

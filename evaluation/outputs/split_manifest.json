@@ -1,0 +1,19 @@
+{
+  "seed": 2026,
+  "grouping": "registered domain of the case URL (string field 'domain' from the linked-check log, no network lookup)",
+  "method": "domains shuffled with the fixed seed, then greedily assigned so each class reaches approximately 30 percent of its cases in the test partition, domain-disjoint",
+  "n_domains_total": 986,
+  "n_domains_dev": 691,
+  "n_domains_test": 295,
+  "dev": {
+    "total": 694,
+    "phishing": 352,
+    "legitimate": 342
+  },
+  "test": {
+    "total": 299,
+    "phishing": 152,
+    "legitimate": 147
+  },
+  "sha256_of_manifest_body": "7e54d92e791257ef27a2d3b38dc3a0fdb63e68a4b6348d8ece5290fdab43644c"
+}

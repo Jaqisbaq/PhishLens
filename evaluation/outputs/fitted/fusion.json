@@ -1,0 +1,36 @@
+{
+  "method": "learned",
+  "feature_order": [
+    "logit_p_url_x_a_url",
+    "logit_p_text_x_a_text",
+    "logit_p_image_x_a_image",
+    "a_url",
+    "a_text",
+    "a_image"
+  ],
+  "coefficients": [
+    0.3237821964193841,
+    0.1722539841891832,
+    0.8567235389877049,
+    -0.8093199626592775,
+    -1.5155228173231716,
+    -0.07668284376249809
+  ],
+  "intercept": -0.09538907108166585,
+  "calibration": {
+    "type": "platt",
+    "a": 1.0062526978903061,
+    "b": -0.18000073775318892
+  },
+  "thresholds": {
+    "low": 0.3519,
+    "high": 0.7633
+  },
+  "disagreement_gap": 0.9967,
+  "fitted": true,
+  "thresholds_provisional": false,
+  "best_single_branch": null,
+  "fitted_on": "694 development linked cases (352 phishing, 342 legitimate), url+text direct model output, image branch grouped 5-fold out-of-fold logistic head, modality-masking augmentation, C=0.1 chosen by grouped 5-fold CV mean average precision (0.9623)",
+  "created": "2026-09-27T10:38:41Z",
+  "notes": "Calibration comparison on development OOF predictions: Brier uncalibrated=0.0722, platt=0.0720, temperature=0.0722. Chosen: platt. disagreement_gap set at the 90th percentile of the development max-minus-min branch probability gap (0.9967), so the disagreement gate fires on roughly the most-disagreeing 10 percent of development cases."
+}

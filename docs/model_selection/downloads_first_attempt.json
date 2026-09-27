@@ -1,0 +1,108 @@
+{
+  "ealvaradob/bert-finetuned-phishing": {
+    "status": "ERROR",
+    "error": "OSError(22, 'A required privilege is not held by the client')"
+  },
+  "cybersectony/phishing-email-detection-distilbert_v2.4.1": {
+    "status": "OK",
+    "revision": "6724dec17360ab1f6450553f1d950404f66a5dde",
+    "download_seconds": 9.73,
+    "downloaded_bytes_on_disk": 268786752,
+    "files_present": [
+      "README.md",
+      "config.json",
+      "model.safetensors",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.txt"
+    ],
+    "weights_format": "safetensors"
+  },
+  "aamoshdahal/email-phishing-distilbert-finetuned": {
+    "status": "OK",
+    "revision": "f9d211125fcb6e85cf73630957667bc2a6e93ed3",
+    "download_seconds": 18.81,
+    "downloaded_bytes_on_disk": 268073120,
+    "files_present": [
+      "README.md",
+      "config.json",
+      "model.safetensors",
+      "special_tokens_map.json",
+      "tokenizer_config.json",
+      "vocab.txt"
+    ],
+    "weights_format": "safetensors"
+  },
+  "ElSlay/BERT-Phishing-Email-Model": {
+    "status": "OK",
+    "revision": "708d260869707ffdb0227c3c838ce957a736c9d6",
+    "download_seconds": 14.15,
+    "downloaded_bytes_on_disk": 438194204,
+    "files_present": [
+      "README.md",
+      "config.json",
+      "model.safetensors",
+      "special_tokens_map.json",
+      "tokenizer_config.json",
+      "vocab.txt"
+    ],
+    "weights_format": "safetensors"
+  },
+  "CrabInHoney/urlbert-tiny-v4-phishing-classifier": {
+    "status": "OK",
+    "revision": "fd962a5cd04e20ceed46aa8a6e31a2b40d4c8916",
+    "download_seconds": 2.91,
+    "downloaded_bytes_on_disk": 14777226,
+    "files_present": [
+      "README.md",
+      "config.json",
+      "model.safetensors",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.txt"
+    ],
+    "weights_format": "safetensors"
+  },
+  "amahdaouy/DomURLs_BERT": {
+    "status": "ERROR",
+    "error": "OSError(22, 'A required privilege is not held by the client')"
+  },
+  "ealvaradob/bert-phishing-url": {
+    "status": "ERROR",
+    "error": "OSError(22, 'A required privilege is not held by the client')"
+  },
+  "pirocheto/phishing-url-detection": {
+    "status": "OK",
+    "revision": "44f3b19f705b52532e0aadf3d0d15dd892b8a2fb",
+    "download_seconds": 2.58,
+    "downloaded_bytes_on_disk": 23554346,
+    "files_present": [
+      "README.md",
+      "config.json",
+      "model.onnx"
+    ],
+    "weights_format": "pytorch_bin_or_other"
+  },
+  "kmack/malicious-url-detection": {
+    "status": "OK",
+    "revision": "258499831602e1aea6c1f00e8483b820dd14b391",
+    "download_seconds": 10.22,
+    "downloaded_bytes_on_disk": 268778243,
+    "files_present": [
+      "README.md",
+      "config.json",
+      "model.safetensors",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.txt"
+    ],
+    "weights_format": "safetensors"
+  },
+  "openai/clip-vit-base-patch32": {
+    "status": "ERROR",
+    "error": "OSError(22, 'A required privilege is not held by the client')"
+  }
+}

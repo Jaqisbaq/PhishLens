@@ -1,0 +1,67 @@
+{
+ "Nazario": {
+  "rows": 1565,
+  "labels": {
+   "1": 1565
+  },
+  "null_or_empty_body": 2,
+  "dup_body": 0,
+  "urls_flag_col": {
+   "1": 1423,
+   "0": 142
+  },
+  "body_has_url_string_by_label": {
+   "1": 258
+  },
+  "first_url_exact_in_training_urls": 13,
+  "year_min": 2015.0,
+  "year_max": 2022.0,
+  "year_median": 2018.0,
+  "body_chars_median": 720,
+  "body_over_2000_chars": 199
+ },
+ "CEAS_08": {
+  "rows": 39154,
+  "labels": {
+   "1": 21842,
+   "0": 17312
+  },
+  "null_or_empty_body": 0,
+  "dup_body": 0,
+  "urls_flag_col": {
+   "1": 26232,
+   "0": 12922
+  },
+  "body_has_url_string_by_label": {
+   "0": 11733,
+   "1": 14960
+  },
+  "first_url_exact_in_training_urls": 303,
+  "year_min": 1980.0,
+  "year_max": 2100.0,
+  "year_median": 2008.0,
+  "body_chars_median": 570,
+  "body_over_2000_chars": 8537
+ },
+ "Nigerian_Fraud": {
+  "rows": 3332,
+  "labels": {
+   "1": 3332
+  },
+  "null_or_empty_body": 1,
+  "dup_body": 0,
+  "urls_flag_col": {
+   "0": 2183,
+   "1": 1149
+  },
+  "body_has_url_string_by_label": {
+   "1": 1225
+  },
+  "first_url_exact_in_training_urls": 27,
+  "year_min": 1980.0,
+  "year_max": 2082.0,
+  "year_median": 2006.0,
+  "body_chars_median": 2547,
+  "body_over_2000_chars": 2348
+ }
+}

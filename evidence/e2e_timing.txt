@@ -1,0 +1,13 @@
+Measured 2026-09-27 on an idle machine (no other CPU-heavy process running).
+Loading all three real models (once)...
+Model load time: 4578.5 ms
+Analyzing one case (url + text + image)...
+Analysis latency (in-process, models already loaded): 427.89 ms
+Orchestrator-reported total_latency_ms: 427.83
+Outcome: High concern
+Fused score: 0.99052337101669
+  branch=url status=ok probability=0.9998563528060913 latency_ms=12.69 model=CrabInHoney/urlbert-tiny-v4-phishing-classifier@fd962a5c
+  branch=text status=ok probability=0.9999492168426514 latency_ms=287.97 model=ealvaradob/bert-finetuned-phishing@fa8fb73a
+  branch=image status=ok probability=0.9602476293410572 latency_ms=127.02 model=openai/clip-vit-base-patch32@3d74acf9
+
+TOTAL (load once + analyze one case): 5006.4 ms

@@ -1,0 +1,285 @@
+{
+  "import_time_ms": {
+    "default_env": [
+      "6943.1 ['jax', 'tensorflow']",
+      "7033.6 ['jax', 'tensorflow']",
+      "6820.6 ['jax', 'tensorflow']"
+    ],
+    "USE_TORCH=1 USE_TF=0 USE_FLAX=0": [
+      "3733.1 []",
+      "3755.0 []",
+      "3849.6 []"
+    ]
+  },
+  "pull_request_refs": {
+    "ealvaradob/bert-finetuned-phishing": {
+      "pull_requests": 1,
+      "with_safetensors": [
+        {
+          "ref": "refs/pr/4",
+          "commit": "c3b5557fd94f1d97ac269bac1eebbae60e54a1d4"
+        }
+      ]
+    },
+    "openai/clip-vit-base-patch32": {
+      "pull_requests": 57,
+      "with_safetensors": [
+        {
+          "ref": "refs/pr/66",
+          "commit": "c237dc49a33fc61debc9276459120b7eac67e7ef"
+        },
+        {
+          "ref": "refs/pr/62",
+          "commit": "37000f5cdccec47a3f6f83142bff131370757470"
+        },
+        {
+          "ref": "refs/pr/61",
+          "commit": "a68f74976de48b74d683037f8407f464f63e3d09"
+        },
+        {
+          "ref": "refs/pr/60",
+          "commit": "a78544bddd3e1ce771f5cfcef4bb1e099240e19c"
+        },
+        {
+          "ref": "refs/pr/59",
+          "commit": "eaee4c876b93e66f7fac584b529025a96d71ad66"
+        },
+        {
+          "ref": "refs/pr/58",
+          "commit": "aa8b329a670ccfc2a5170d7391ac3fca2e88595f"
+        },
+        {
+          "ref": "refs/pr/57",
+          "commit": "e4b57025458bf5454b0de44068e7cdce28218bc9"
+        },
+        {
+          "ref": "refs/pr/56",
+          "commit": "55072b9dd65c9cdd77ed2e8d2270a0ce0a589c54"
+        },
+        {
+          "ref": "refs/pr/55",
+          "commit": "1f3798556f2514949577d1cfa5b1ca2d9a29545f"
+        },
+        {
+          "ref": "refs/pr/54",
+          "commit": "7acf2b9424441aa2421c44f2222c14d2c540cbdd"
+        },
+        {
+          "ref": "refs/pr/53",
+          "commit": "4cc56155249b33c56cf4c00db1cb66c4462cd17a"
+        },
+        {
+          "ref": "refs/pr/52",
+          "commit": "956a7bc8f1ec4aafae6641bad9bb09b84d0a70d9"
+        },
+        {
+          "ref": "refs/pr/51",
+          "commit": "b97b0100e55e367c057773c2a614676470b0d575"
+        },
+        {
+          "ref": "refs/pr/50",
+          "commit": "9958ed3864508378e086a340022b2f67cbf0d0f5"
+        },
+        {
+          "ref": "refs/pr/49",
+          "commit": "47394b86939e3654939538c5dd7097e36ea16a0c"
+        },
+        {
+          "ref": "refs/pr/48",
+          "commit": "9f35da2142fb5af74b048b4d03e32dcb6282c270"
+        },
+        {
+          "ref": "refs/pr/47",
+          "commit": "1eb3500bd3c0fdf36230978ffe034b575579fff6"
+        },
+        {
+          "ref": "refs/pr/46",
+          "commit": "378e8f211ca4a3b4d2476e17e3351d9c88a203ae"
+        },
+        {
+          "ref": "refs/pr/45",
+          "commit": "8dad23d653361bb136507c8bb2a97b57c844b8ff"
+        },
+        {
+          "ref": "refs/pr/44",
+          "commit": "1bb210203970f4b4268b29dab3dc7e27c3d3c7ee"
+        },
+        {
+          "ref": "refs/pr/43",
+          "commit": "d55bc54265e2ab9c84d56f001de9edc81f5a5ee3"
+        },
+        {
+          "ref": "refs/pr/42",
+          "commit": "c7244be81152024ce0e99ac8d2e373a8953d9f9a"
+        },
+        {
+          "ref": "refs/pr/41",
+          "commit": "e5af27227555d0743931fe022f3b1684d58d4e18"
+        },
+        {
+          "ref": "refs/pr/40",
+          "commit": "be35e1cf6ab51bb4daa2b1db53e9f543d4544b47"
+        },
+        {
+          "ref": "refs/pr/39",
+          "commit": "43507aab313877c94887e8d16d5fc704770721bc"
+        },
+        {
+          "ref": "refs/pr/38",
+          "commit": "969cf02e0778b9b03ea2ce9e17280ff641598348"
+        },
+        {
+          "ref": "refs/pr/37",
+          "commit": "740af00c69dc8d79fa7b16d6b49047d3236eef32"
+        },
+        {
+          "ref": "refs/pr/36",
+          "commit": "73dbca08b5ed269745580e3f9ad88ddbbff8621d"
+        },
+        {
+          "ref": "refs/pr/35",
+          "commit": "9cbdd7b8d9fc6e972b86a1291768b765ccd28073"
+        },
+        {
+          "ref": "refs/pr/34",
+          "commit": "bfc19449bc6f18c54292b85378cbccc3ad91a24e"
+        },
+        {
+          "ref": "refs/pr/33",
+          "commit": "d44250afa9f05af7eca021052567539406661018"
+        },
+        {
+          "ref": "refs/pr/32",
+          "commit": "fb066271b2977607c9d003ba1c2d8830bc8d73f9"
+        },
+        {
+          "ref": "refs/pr/29",
+          "commit": "aba0d2990c5c81a51290b5e895dda8237b39e0be"
+        },
+        {
+          "ref": "refs/pr/28",
+          "commit": "d2bce4bc6684fb94eb627c995ba3164d618ef0f7"
+        },
+        {
+          "ref": "refs/pr/27",
+          "commit": "bf8895cff1da285aa497db31204d14464adcaa7c"
+        },
+        {
+          "ref": "refs/pr/26",
+          "commit": "d15b5f29721ca72dac15f8526b284be910de18be"
+        },
+        {
+          "ref": "refs/pr/25",
+          "commit": "fbf5e647b25f3514e526849b05cc0196b206d822"
+        },
+        {
+          "ref": "refs/pr/24",
+          "commit": "f85caf0ad40f6f6719a8d5d043c84c0dcbd3f303"
+        },
+        {
+          "ref": "refs/pr/23",
+          "commit": "93c739f3ac351a1c5537eeb143582c6bb7cc51b8"
+        },
+        {
+          "ref": "refs/pr/21",
+          "commit": "13fe208b3396643470c94b927a457ea4bae45c82"
+        },
+        {
+          "ref": "refs/pr/15",
+          "commit": "b33cedfd0df4e43b8238760678fcc89e1a0d38b3"
+        },
+        {
+          "ref": "refs/pr/3",
+          "commit": "b527df4b30e5cc18bde1cc712833a741d2d8c362"
+        }
+      ]
+    }
+  },
+  "transformers_torch_load": {
+    "weights_only_mentions": 24,
+    "lines": [
+      "weights_only_kwarg = {\"weights_only\": True}",
+      "loader = safe_load_file if load_safe else partial(torch.load, map_location=\"cpu\", **weights_only_kwarg)",
+      "weights_only: bool = True,",
+      "weights_only_kwarg = {\"weights_only\": weights_only}",
+      "**weights_only_kwarg,",
+      "weights_only: bool = True,",
+      "weights_only (`bool`, *optional*, defaults to `True`):",
+      "weights_only=weights_only,",
+      "state_dict = load_state_dict(resolved_archive_file, weights_only=weights_only)",
+      "one_state_dict = load_state_dict(resolved_archive_file[0], weights_only=weights_only)",
+      "weights_only=weights_only,",
+      "weights_only=True,"
+    ]
+  },
+  "dataset_cards": {
+    "ealvaradob/phishing-dataset": {
+      "revision": "55caf9af01ae498d68ff44886ff69a4b165eb54b",
+      "licence": "apache-2.0",
+      "gated": false,
+      "files": [
+        ".gitattributes",
+        "README.md",
+        "combined_full.json",
+        "combined_reduced.json",
+        "gitattributes",
+        "phishing-dataset.py",
+        "texts.json",
+        "urls.json",
+        "webs.json"
+      ],
+      "card_chars": 6752
+    },
+    "cybersectony/PhishingEmailDetectionv2.0": {
+      "revision": "afba38f4a7ffbe89259ab68ae7c6426f944496cc",
+      "licence": null,
+      "gated": false,
+      "files": [
+        ".gitattributes",
+        "README.md",
+        "data/test-00000-of-00001.parquet",
+        "data/train-00000-of-00001.parquet",
+        "data/validation-00000-of-00001.parquet"
+      ],
+      "card_chars": 1366
+    },
+    "zefang-liu/phishing-email-dataset": {
+      "revision": "34085a032c123ca237f314a01a67909cdea35e34",
+      "licence": "lgpl-3.0",
+      "gated": false,
+      "files": [
+        ".gitattributes",
+        "Phishing_Email.csv",
+        "README.md"
+      ],
+      "card_chars": 616
+    },
+    "pirocheto/phishing-url": {
+      "revision": "1375d450d4540205ac11781b807249c9509739cd",
+      "licence": "cc-by-4.0",
+      "gated": false,
+      "files": [
+        ".gitattributes",
+        "2010.12847.pdf",
+        "README.md",
+        "data/test.parquet",
+        "data/train.parquet",
+        "images/source_data.png"
+      ],
+      "card_chars": 3140
+    },
+    "kmack/Phishing_urls": {
+      "revision": "ef1558ba51b6b3e1a2c264ec8227be0a08736e10",
+      "licence": null,
+      "gated": false,
+      "files": [
+        ".gitattributes",
+        "README.md",
+        "data/test-00000-of-00001-4d6cbda5297196e7.parquet",
+        "data/train-00000-of-00001-d8afc95a165ea87b.parquet",
+        "data/valid-00000-of-00001-4e1abfe96aa382c2.parquet"
+      ],
+      "card_chars": 518
+    }
+  }
+}
