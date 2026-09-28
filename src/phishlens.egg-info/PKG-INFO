@@ -1,5 +1,0 @@
-Metadata-Version: 2.4
-Name: phishlens
-Version: 0.1.0
-Summary: Local phishing triage that fuses three pretrained models. No outbound network calls.
-Requires-Python: >=3.10
