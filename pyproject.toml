@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phishlens"
+version = "0.1.0"
+description = "Local phishing triage that fuses three pretrained models. No outbound network calls."
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: integration tests that load the three real models",
+]
+testpaths = ["tests"]
